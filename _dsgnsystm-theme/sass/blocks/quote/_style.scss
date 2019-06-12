@@ -1,0 +1,58 @@
+:root {
+	--quote--border-color: var(--global--color-primary);
+}
+
+.wp-block-quote {
+
+	border-left-color: var(--quote--border-color);
+	margin: var(--global--vertical-spacing-unit) 0;
+	padding: 0 var(--global--spacing-unit);
+
+	& > * {
+		margin-top: var(--global--spacing-unit);
+		margin-bottom: var(--global--spacing-unit);
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	p {
+		font-size: var(--heading--font-size-4);
+		letter-spacing: var(--heading--letter-spacing-4);
+		line-height: var(--global--font-line-height);
+	}
+
+	.wp-block-quote__citation,
+	cite,
+	footer {
+		color: var(--global--color-foreground-light);
+		font-size: var(--global--font-size-sm);
+		letter-spacing: var(--global--letter-spacing-sm);
+	}
+
+	/**
+	 * Block Options
+	 */
+	&[style*="text-align:right"],
+	&[style*="text-align: right"] {
+		border-right-color: var(--quote--border-color);
+	}
+
+	&.is-style-large,
+	&.is-large {
+		/* Resetting margins to match _block-container.scss */
+		margin-top: var(--global--vertical-spacing-unit);
+		margin-bottom: var(--global--vertical-spacing-unit);
+
+		p {
+			font-size: var(--heading--font-size-3);
+			letter-spacing: var(--heading--letter-spacing-3);
+			line-height: var(--heading--line-height);
+		}
+	}
+}

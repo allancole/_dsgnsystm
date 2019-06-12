@@ -1,0 +1,109 @@
+/* Text Alignments */
+.alignleft {
+	/*rtl:ignore*/
+	text-align: left;
+	/*rtl:ignore*/
+	float: left;
+	/*rtl:ignore*/
+	margin-right: var(--global--spacing-unit);
+	margin-top: 0;
+	margin-bottom: var(--global--spacing-unit);
+	max-width: 50%;
+}
+
+.aligncenter {
+	clear: both;
+	float: none;
+	text-align: center;
+}
+
+.alignright {
+	/*rtl:ignore*/
+	float: right;
+	/*rtl:ignore*/
+	margin-left: var(--global--spacing-unit);
+	margin-top: 0;
+	margin-bottom: var(--global--spacing-unit);
+	max-width: 50%;
+}
+
+.alignwide {
+	margin-left: calc( -0.25 * ( 100vw - var(--global--width-content) ) );
+	margin-right: calc( -0.25 * ( 100vw - var(--global--width-content) ) );
+	width: calc( var(--global--width-content) + ( 0.5 * ( 100vw - var(--global--width-content) ) ) );
+	max-width: calc( var(--global--width-content) + ( 0.5 * ( 100vw - var(--global--width-content) ) ) );
+}
+
+.alignfull {
+	margin-left: calc( -0.5 * ( 100vw - var(--global--width-content) ) );
+	margin-right: calc( -0.5 * ( 100vw - var(--global--width-content) ) );
+	width: 100vw;
+	max-width: calc( var(--global--width-content) + ( 100vw - var(--global--width-content) ) );
+}
+
+// Content alignment
+.has-left-content {
+	justify-content: flex-start;
+}
+
+.has-right-content {
+	justify-content: flex-end;
+}
+
+// Parallax
+.has-parallax {
+    background-attachment: fixed;
+}
+
+// Gutenberg Font-size options
+.is-small-text,
+.has-small-font-size {
+	font-size: var(--global--font-size-sm);
+}
+
+.is-regular-text,
+.has-regular-font-size,
+.has-normal-font-size,
+.has-medium-font-size {
+	font-size: var(--global--font-size-md);
+}
+
+.is-large-text,
+.has-large-font-size {
+	font-size: var(--heading--font-size-3);
+	line-height: var(--heading--line-height);
+}
+
+.is-larger-text,
+.has-larger-font-size,
+.has-huge-font-size {
+	font-size: var(--heading--font-size-1);
+	line-height: var(--heading--line-height);
+}
+
+// Drop caps
+.has-drop-cap:not(:focus)::first-letter {
+	font-family: var(--heading--font-family);
+	font-size: calc(2 * var(--heading--font-size-1));
+	font-weight: var(--heading--font-weight);
+	line-height: 0.66;
+	text-transform: uppercase;
+	font-style: normal;
+	float: left;
+	margin: 0.1em 0.1em 0 0;
+}
+
+.has-drop-cap:not(:focus)::after {
+	content: "";
+	display: table;
+	clear: both;
+	padding-top: 14px;
+}
+
+.desktop-only {
+	display: none;
+
+	@include media(mobile) {
+		display: block;
+	}
+}

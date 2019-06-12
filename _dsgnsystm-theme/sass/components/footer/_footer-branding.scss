@@ -1,0 +1,30 @@
+:root {
+	--site-footer--color-text: var(--global--color-foreground-light);
+	--site-footer--color-link: var(--global--color-primary);
+	--site-footer--color-link-hover: var(--global--color-primary-hover);
+	--site-footer--site-info--font-family: var(--global--font-primary);
+	--site-footer--site-info--font-size: var(--global--font-size-xs);
+}
+
+// Site info
+
+.site-info {
+
+	color: var(--site-footer--color-text);
+	font-family: var(--site-footer--site-info--font-family);
+	font-size: var(--site-footer--site-info--font-size);
+
+	a {
+		color: currentColor;
+
+		&:link,
+		&:visited {
+			color: currentColor;
+		}
+
+		&:hover {
+			color: var(--site-footer--color-link-hover);
+		}
+	}
+}
+

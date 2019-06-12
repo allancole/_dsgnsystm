@@ -1,0 +1,13 @@
+/**
+ * Abstracts
+ * - Mixins, variables and functions
+ */
+
+@import "mixins";
+@import "global-variables";
+@import "functions";
+
+:root {
+	/* global variables */
+	@include global-variables;
+}

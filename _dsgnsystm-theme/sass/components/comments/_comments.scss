@@ -1,0 +1,193 @@
+/**
+ * Comments Wrapper
+ */
+.comments-area {
+
+	& > * {
+		margin-top: var(--global--vertical-spacing-unit);
+		margin-bottom: var(--global--vertical-spacing-unit);
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+/**
+ * Comment Title
+ */
+
+.comments-title {
+	font-size: var(--heading--font-size-3);
+	letter-spacing: var(--heading--letter-spacing-3);
+}
+
+.comment-reply-title {
+	font-size: var(--global--font-size-md);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	small {
+		font-size: var(--global--font-size-base);
+		font-family: var(--global--font-secondary);
+		letter-spacing: normal;
+		line-height: var(--heading--line-height);
+	}
+}
+
+/**
+ * Comment Lists
+ */
+
+.comment-list {
+	border-bottom: 1px solid var(--global--color-border);
+	margin-left: 0;
+	list-style: none;
+
+	> li {
+		border-top: 1px solid var(--global--color-border);
+		margin-top: var(--global--vertical-spacing-unit);
+		margin-bottom: var(--global--vertical-spacing-unit);
+	}
+}
+
+.children {
+	list-style: none;
+	margin-left: var(--global--spacing-unit);
+
+	> li {
+		border-top: 1px solid var(--global--color-border);
+		margin-top: var(--global--vertical-spacing-unit);
+		margin-bottom: var(--global--vertical-spacing-unit);
+	}
+
+	@include media(mobile) {
+		margin-left: calc(2 * var(--global--spacing-unit));
+	}
+}
+
+/**
+ * Comment Meta
+ */
+
+.comment-meta {
+
+	$avatar-size: 32px;
+
+	margin-right: calc( $avatar-size + (0.5 * var(--global--spacing-unit)) );
+
+	@include media(mobile) {
+		margin-right: inherit;
+	}
+
+	.comment-author {
+
+		@include media(mobile) {
+			display: flex;
+			align-items: center;
+		}
+
+		.avatar {
+			display: block;
+			position: absolute;
+			right: 0;
+
+			@include media(mobile) {
+				margin-right: var(--global--spacing-unit);
+				display: inherit;
+				position: inherit;
+				right: inherit;
+			}
+		}
+	}
+
+	.comment-metadata {
+
+		color: var(--global--color-foreground);
+
+		a {
+			color: currentColor;
+
+			&:hover,
+			&:active {
+				color: var(--global--color-primary-hover);
+			}
+		}
+	}
+
+	@include media(mobile) {
+		align-items: center;
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+.comment-metadata,
+.reply {
+	font-size: var(--global--font-size-xs);
+	line-height: var(--heading--line-height);
+}
+
+.reply {
+	text-align: right;
+	@include media(mobile) {
+		text-align: left;
+	}
+}
+
+.bypostauthor {
+	display: block;
+}
+
+.says {
+	display: none;
+}
+
+.comment-author .fn,
+.pingback .url,
+.trackback .url {
+	font-family: var(--global--font-primary);
+}
+
+/**
+ * Comment body
+ */
+
+.comment-body {
+
+	position: relative;
+
+	& > * {
+		margin-top: var(--global--spacing-unit);
+		margin-bottom: var(--global--spacing-unit);
+	}
+}
+
+.comment-content a {
+	word-wrap: break-word;
+}
+
+/**
+ * Pingbacks & Trackbacks
+ */
+
+.pingback .comment-body,
+.trackback .comment-body {
+	margin-top: var(--global--vertical-spacing-unit);
+	margin-bottom: var(--global--vertical-spacing-unit);
+}
+
+/**
+ * Comment Form
+ */
+@import "comment-form";
+
+/**
+ * Comment Nav
+ */
+@import "comment-navigation";

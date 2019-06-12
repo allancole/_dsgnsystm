@@ -1,0 +1,27 @@
+:root {
+	--separator--height: 2px;
+	--separator--vertical-spacing-unit: calc(2 * var(--global--vertical-spacing-unit));
+}
+
+.wp-block-separator,
+hr {
+    border-bottom: var(--separator--height) solid var(--global--color-border);
+
+	&[style*="text-align:right"],
+	&[style*="text-align: right"] {
+		border-right-color: var(--quote--border-color);
+	}
+
+	&.is-style-wide {
+		border-bottom-width: var(--separator--height);
+	}
+
+	&.is-style-dots {
+
+		border-bottom: none;
+
+		&:before {
+			color: var(--global--color-border);
+		}
+	}
+}

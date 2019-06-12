@@ -1,0 +1,1136 @@
+@charset "UTF-8";
+/*
+Theme Name: Dsgnsystm
+Theme URI: https://github.com/Automattic/_dsgnsystm
+Author: the WordPress team
+Author URI: https://wordpress.org/
+Description: Our 2019 default theme is designed to show off the power of the block editor. It features custom styles for all the default blocks, and is built so that what you see in the editor looks like what you'll see on your website. _Dsgnsystm is designed to be adaptable to a wide range of websites, whether you’re running a photo blog, launching a new business, or supporting a non-profit. Featuring ample whitespace and modern sans-serif headlines paired with classic serif body text, it's built to be beautiful on all screen sizes.
+Requires at least: WordPress 4.9.6
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: _dsgnsystm
+Tags: one-column, flexible-header, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, rtl-language-support, sticky-post, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+_Dsgnsystm is based on Underscores https://underscores.me/, (C) 2012-2018 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+/* Legacy Globals - will be removed in the future */
+/*
+@import "sass/globals/legacy/mixins-master";
+@import "sass/globals/legacy/utilities";
+@import "sass/globals/legacy/colors";
+@import "sass/globals/legacy/fonts";
+@import "sass/globals/legacy/structure";
+@import "sass/globals/legacy/columns";
+@import "sass/globals/legacy/transitions";
+@import "sass/globals/legacy/layout";
+@import "sass/globals/legacy/typography";
+@import "sass/globals/legacy/headings";
+@import "sass/globals/legacy/copy";
+*/
+/* Globals */
+/* Responsive Styles */
+:root {
+	/* Fonts & Typography */
+	--global--font-primary: sans-serif;
+	--global--font-secondary: serif;
+	--global--font-code: monospace, monospace;
+	--global--font-size-base: 1em;
+	--global--font-size-xs: 0.66em;
+	--global--font-size-sm: 0.875em;
+	--global--font-size-md: 1.125em;
+	--global--font-size-lg: 1.5em;
+	--global--font-size-xl: 2em;
+	--global--font-size-xxl: 2.625em;
+	--global--font-size-xxxl: 3.375em;
+	--global--font-line-height: 1.75em;
+	--global--letter-spacing-xs: 0.125em;
+	--global--letter-spacing-sm: 0.0625em;
+	--global--letter-spacing-md: 0;
+	--global--letter-spacing-lg: 0;
+	--global--letter-spacing-xl: 0;
+	--global--letter-spacing-xxl: -0.0125em;
+	--global--letter-spacing-xxxl: -0.025em;
+	/* Colors */
+	--global--color-primary: blue;
+	--global--color-primary-hover: indigo;
+	--global--color-secondary: red;
+	--global--color-secondary-hover: darkred;
+	--global--color-black: black;
+	--global--color-white: white;
+	--global--color-foreground: #111111;
+	--global--color-background: var(--global--color-white);
+	--global--color-border: #dddddd;
+	/* Spacing */
+	--global--spacing-unit: 1rem;
+	--global--horizontal-spacing-unit: var(--global--spacing-unit);
+	--global--vertical-spacing-unit: 32px;
+	/* 32px matches default spacing in the editor. */
+	/* Elevation */
+	--global--elevation-1: 0px 0px 4px 2px rgba( 0, 0, 0, 0.2 );
+	--global--elevation-2: 0px 0px 8px 2px rgba( 0, 0, 0, 0.2 );
+	--global--elevation-3: 2px 2px 4px 2px rgba( 0, 0, 0, 0.2 );
+	--global--elevation-4: 2px 2px 8px 0px rgba( 0, 0, 0, 0.2 );
+	--global--elevation-5: 4px 4px 8px 0px rgba( 0, 0, 0, 0.2 );
+}
+
+/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+html {
+	line-height: 1;
+	/* 1 */
+	-ms-text-size-adjust: 100%;
+	/* 2 */
+	-webkit-text-size-adjust: 100%;
+	/* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+body {
+	margin: 0;
+}
+
+/**
+ * Add the correct display in IE 9-.
+ */
+article,
+aside,
+footer,
+header,
+nav,
+section {
+	display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in IE.
+ */
+figcaption,
+figure,
+main {
+	/* 1 */
+	display: block;
+}
+
+/**
+ * Add the correct margin in IE 8.
+ */
+figure {
+	margin: 0;
+}
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+	box-sizing: content-box;
+	/* 1 */
+	height: 0;
+	/* 1 */
+	overflow: visible;
+	/* 2 */
+}
+
+/**
+ * 1. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+	font-family: var(--global--font-code);
+	font-size: var(--global--font-size-md);
+	/* 1 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+a {
+	background-color: transparent;
+	/* 1 */
+	-webkit-text-decoration-skip: objects;
+	/* 2 */
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+	border-bottom: none;
+	/* 1 */
+	text-decoration: underline;
+	/* 2 */
+	text-decoration: underline dotted;
+	/* 2 */
+}
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+b,
+strong {
+	font-weight: inherit;
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+	font-weight: bolder;
+}
+
+/**
+ * 1. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+	font-family: var(--global--font-code);
+	font-size: var(--global--font-size-md);
+	/* 1 */
+}
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+dfn {
+	font-style: italic;
+}
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+mark {
+	background-color: var(--global--color-border);
+	color: var(--global--color-black);
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+figcaption,
+small {
+	font-size: var(--global--font-size-sm);
+	letter-spacing: var(--global--letter-spacing-sm);
+}
+
+big {
+	font-size: var(--global--font-size-xxxl);
+	letter-spacing: var(--global--letter-spacing-xxxl);
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+	font-size: var(--global--font-size-xs);
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+sup {
+	top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+audio,
+video {
+	display: inline-block;
+}
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+audio:not([controls]) {
+	display: none;
+	height: 0;
+}
+
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+img {
+	border-style: none;
+}
+
+/**
+ * Hide the overflow in IE.
+ */
+svg:not(:root) {
+	overflow: hidden;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+	font-family: var(--global--font-primary);
+	/* 1 */
+	font-size: 100%;
+	/* 1 */
+	line-height: 1.125;
+	/* 1 */
+	margin: 0;
+	/* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+	/* 1 */
+	overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+	/* 1 */
+	text-transform: none;
+}
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+	-webkit-appearance: button;
+	/* 2 */
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+	border-style: none;
+	padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+	outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+	padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+	box-sizing: border-box;
+	/* 1 */
+	color: inherit;
+	/* 2 */
+	display: table;
+	/* 1 */
+	max-width: 100%;
+	/* 1 */
+	padding: 0;
+	/* 3 */
+	white-space: normal;
+	/* 1 */
+}
+
+/**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+	display: inline-block;
+	/* 1 */
+	vertical-align: baseline;
+	/* 2 */
+}
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+textarea {
+	overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+[type="checkbox"],
+[type="radio"] {
+	box-sizing: border-box;
+	/* 1 */
+	padding: 0;
+	/* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+	height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+	-webkit-appearance: textfield;
+	/* 1 */
+	outline-offset: -2px;
+	/* 2 */
+}
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+	-webkit-appearance: button;
+	/* 1 */
+	font: inherit;
+	/* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+details,
+menu {
+	display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+	display: list-item;
+}
+
+/* Scripting
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+canvas {
+	display: inline-block;
+}
+
+/**
+ * Add the correct display in IE.
+ */
+template {
+	display: none;
+}
+
+/* Hidden
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10-.
+ */
+[hidden] {
+	display: none;
+}
+
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	padding: 0;
+	margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+	margin: 0;
+}
+
+img,
+embed,
+iframe,
+object,
+audio,
+video {
+	max-width: 100%;
+	height: auto;
+}
+
+iframe {
+	border: 0;
+}
+
+table {
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+
+td,
+th {
+	padding: 0;
+	text-align: right;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	font-family: var(--global--font-secondary);
+	line-height: var(--global--font-line-height);
+}
+
+body {
+	font-size: var(--global--font-size-md);
+	font-weight: normal;
+	color: var(--global--color-foreground);
+	text-align: right;
+	background-color: var(--global--color-background);
+}
+
+a {
+	color: var(--global--color-primary);
+}
+
+a:hover {
+	color: var(--global--color-primary-hover);
+}
+
+button,
+a {
+	cursor: pointer;
+}
+
+/*
+@import "sass/globals/legacy/accessibility";
+@import "sass/globals/legacy/clearings";
+*/
+/* Elements */
+:root {
+	--button--color-text: var(--global--color-background);
+	--button--color-text-hover: var(--button--color-text);
+	--button--color-background: var(--global--color-primary);
+	--button--color-background-hover: var(--global--color-primary-hover);
+	--button--font-family: var(--global--font-primary);
+	--button--font-size: var(--global--font-size-md);
+	--button--font-weight: bold;
+	--button--font-line-height: 1;
+	--button--border-radius: var(--global--border-radius, .5em);
+	--button--spacing-unit: var(--global--spacing-unit);
+}
+
+button,
+.wp-block-button__link {
+	color: var(--button--color-text);
+	font-weight: var(--button--font-weight);
+	font-family: var(--button--font-family);
+	font-size: var(--button--font-size);
+	line-height: var(--button--font-line-height);
+	background-color: var(--button--color-background);
+	border: none;
+	border-radius: var(--button--border-radius);
+	box-shadow: none;
+	cursor: pointer;
+	display: inline-block;
+	margin: 0;
+	padding: calc(.66 * var(--button--spacing-unit)) var(--button--spacing-unit);
+	text-align: center;
+	text-decoration: none;
+	white-space: normal;
+	overflow-wrap: break-word;
+}
+
+button:hover, button:focus, button.has-focus,
+.wp-block-button__link:hover,
+.wp-block-button__link:focus,
+.wp-block-button__link.has-focus {
+	color: var(--button--color-text-hover);
+	background-color: var(--button--color-background-hover);
+}
+
+/* Options */
+.wp-block-button {
+	/* Outline Style */
+	/* Squared Style */
+}
+
+.wp-block-button.is-style-outline {
+	color: var(--button--color-background);
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link {
+	color: var(--button--color-background);
+	background: transparent;
+	border: 2px solid currentcolor;
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link:hover, .wp-block-button.is-style-outline .wp-block-button__link:focus, .wp-block-button.is-style-outline .wp-block-button__link.has-focus {
+	color: var(--button--color-background-hover);
+}
+
+.wp-block-button.is-style-squared .wp-block-button__link {
+	border-radius: 0;
+}
+
+:root {
+	--heading--font-family: var(--global--font-primary);
+	--heading--font-size-6: var(--global--font-size-base);
+	--heading--font-size-5: var(--global--font-size-md);
+	--heading--font-size-4: var(--global--font-size-lg);
+	--heading--font-size-3: var(--global--font-size-xl);
+	--heading--font-size-2: var(--global--font-size-xxl);
+	--heading--font-size-1: var(--global--font-size-xxxl);
+	--heading--letter-spacing-6: var(--global--letter-spacing-md);
+	--heading--letter-spacing-5: var(--global--letter-spacing-md);
+	--heading--letter-spacing-4: var(--global--letter-spacing-lg);
+	--heading--letter-spacing-3: var(--global--letter-spacing-xl);
+	--heading--letter-spacing-2: var(--global--letter-spacing-xxl);
+	--heading--letter-spacing-1: var(--global--letter-spacing-xxxl);
+	--heading--line-height: 1.25em;
+	--heading--font-weight: 600;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+	font-family: var(--heading--font-family);
+	font-weight: var(--heading--font-weight);
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4 {
+	line-height: var(--heading--line-height);
+}
+
+h5, .h5,
+h6, .h6 {
+	line-height: var(--global--font-line-height);
+}
+
+h1, .h1 {
+	font-size: var(--heading--font-size-1);
+	letter-spacing: var(--heading--letter-spacing-1);
+}
+
+h2, .h2 {
+	font-size: var(--heading--font-size-2);
+	letter-spacing: var(--heading--letter-spacing-2);
+}
+
+h3, .h3 {
+	font-size: var(--heading--font-size-3);
+	letter-spacing: var(--heading--letter-spacing-3);
+}
+
+h4, .h4 {
+	font-size: var(--heading--font-size-4);
+	letter-spacing: var(--heading--letter-spacing-4);
+}
+
+h5, .h5 {
+	font-size: var(--heading--font-size-5);
+	letter-spacing: var(--heading--letter-spacing-5);
+}
+
+h6, .h6 {
+	font-size: var(--heading--font-size-6);
+	letter-spacing: var(--heading--letter-spacing-6);
+}
+
+ul, ol {
+	margin: 0 var(--global--spacing-unit) 0 0;
+	padding: 0;
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 var(--global--spacing-unit) 0 0;
+}
+
+* > figure > img,
+* > figure > video {
+	max-width: unset;
+	width: 100%;
+	vertical-align: middle;
+}
+
+:root {
+	--separator--height: 2px;
+	--separator--vertical-spacing-unit: calc(2 * var(--global--vertical-spacing-unit));
+}
+
+.wp-block-separator,
+hr {
+	background-color: var(--global--color-border);
+	border: 0;
+	height: var(--separator--height);
+	margin-bottom: var(--separator--vertical-spacing-unit);
+	margin-top: var(--separator--vertical-spacing-unit);
+	max-width: 5em;
+	text-align: right;
+}
+
+.wp-block-separator.is-style-wide,
+hr.is-style-wide {
+	max-width: 100%;
+}
+
+.wp-block-separator.is-style-dots,
+hr.is-style-dots {
+	max-width: 100%;
+	background-color: inherit;
+	border: inherit;
+	height: inherit;
+	text-align: center;
+}
+
+.wp-block-separator.is-style-dots:before,
+hr.is-style-dots:before {
+	content: "\00b7 \00b7 \00b7";
+	color: var(--global--color-border);
+	font-size: var(--global--font-size-xl);
+	letter-spacing: var(--global--font-size-sm);
+	padding-right: var(--global--font-size-sm);
+}
+
+/**
+ * Blocks
+ *
+ * - In the future the Block styles will get compiled to individual .css files and conditionally loaded
+ */
+/**
+ * Page Layout Styles & Repsonsive Styles
+ */
+/* Responsive width-content overrides */
+:root {
+	--global--width-content: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+	:root {
+		--global--width-content: calc( 600px - (2 * var(--global--spacing-unit)));
+	}
+}
+
+@media only screen and (min-width: 800px) {
+	:root {
+		--global--width-content: calc( 800px - (2 * var(--global--spacing-unit)));
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	:root {
+		--global--width-content: calc( 1024px - (2 * var(--global--spacing-unit)));
+	}
+}
+
+@media only screen and (min-width: 1280px) {
+	:root {
+		--global--width-content: calc( 1024px - (2 * var(--global--spacing-unit)));
+	}
+}
+
+@media only screen and (min-width: 1440px) {
+	:root {
+		--global--width-content: calc( 1024px - (2 * var(--global--spacing-unit)));
+	}
+}
+
+/* Block Content Wrappers */
+.site-header,
+.entry-content,
+.site-footer {
+	padding: var(--global--vertical-spacing-unit) var(--global--spacing-unit);
+	max-width: var(--global--width-content);
+	margin-right: auto;
+	margin-left: auto;
+}
+
+@media only screen and (min-width: 600px) {
+	.site-header,
+	.entry-content,
+	.site-footer {
+		padding-right: 0;
+		padding-left: 0;
+	}
+}
+
+.site-header > *,
+.entry-content > *,
+.site-footer > * {
+	margin-top: var(--global--vertical-spacing-unit);
+	margin-bottom: var(--global--vertical-spacing-unit);
+}
+
+.site-header > *:first-child,
+.entry-content > *:first-child,
+.site-footer > *:first-child {
+	margin-top: 0;
+}
+
+.site-header > *:last-child,
+.entry-content > *:last-child,
+.site-footer > *:last-child {
+	margin-bottom: 0;
+}
+
+/* Text Alignments */
+.alignleft {
+	text-align: left;
+	float: left;
+	margin-right: var(--global--spacing-unit);
+	margin-bottom: var(--global--spacing-unit);
+	max-width: 50%;
+}
+
+.aligncenter {
+	clear: both;
+	float: none;
+	text-align: center;
+}
+
+.alignright {
+	float: right;
+	margin-left: var(--global--spacing-unit);
+	margin-bottom: var(--global--spacing-unit);
+	max-width: 50%;
+}
+
+.alignwide {
+	margin-right: calc( -0.25 * ( 100vw - var(--global--width-content) ));
+	margin-left: calc( -0.25 * ( 100vw - var(--global--width-content) ));
+	max-width: calc( var(--global--width-content) + ( 0.5 * ( 100vw - var(--global--width-content) ) ));
+}
+
+.alignfull {
+	margin-right: calc( -0.5 * ( 100vw - var(--global--width-content) ));
+	margin-left: calc( -0.5 * ( 100vw - var(--global--width-content) ));
+	max-width: calc( var(--global--width-content) + ( 100vw - var(--global--width-content) ));
+}
+
+.has-small-font-size {
+	font-size: var(--global--font-size-sm);
+}
+
+.has-regular-font-size,
+.has-normal-font-size {
+	font-size: var(--global--font-size-md);
+}
+
+.has-medium-font-size {
+	font-size: var(--heading--font-size-4);
+	line-height: var(--heading--line-height);
+}
+
+.has-large-font-size {
+	font-size: var(--heading--font-size-3);
+	line-height: var(--heading--line-height);
+}
+
+.has-larger-font-size {
+	font-size: var(--heading--font-size-2);
+	line-height: var(--heading--line-height);
+}
+
+.has-huge-font-size {
+	font-size: var(--heading--font-size-1);
+	line-height: var(--heading--line-height);
+}
+
+.has-drop-cap:not(:focus)::first-letter {
+	font-family: var(--heading--font-family);
+	font-size: calc(2 * var(--heading--font-size-1));
+	font-weight: var(--heading--font-weight);
+	line-height: 0.66;
+	text-transform: uppercase;
+	font-style: normal;
+	float: right;
+	margin: 0.1em 0 0 0.1em;
+}
+
+.has-drop-cap:not(:focus)::after {
+	content: "";
+	display: table;
+	clear: both;
+	padding-top: 14px;
+}
+
+:root {
+	--columns--width-gutter: calc( 0.5 * var(--global--spacing-unit) );
+}
+
+.wp-block-columns {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.wp-block-columns .wp-block-column {
+	flex: 1 1 100%;
+	min-width: 0;
+	word-break: break-word;
+	overflow-wrap: break-word;
+}
+
+.wp-block-columns .wp-block-column > * {
+	margin-top: var(--global--spacing-unit);
+	margin-bottom: var(--global--spacing-unit);
+}
+
+.wp-block-columns .wp-block-column > *:first-child {
+	margin-top: 0;
+}
+
+.wp-block-columns .wp-block-column > *:last-child {
+	margin-bottom: 0;
+}
+
+.wp-block-columns.alignfull {
+	padding-right: var(--global--spacing-unit);
+	padding-left: var(--global--spacing-unit);
+}
+
+@media only screen and (min-width: 600px) {
+	.wp-block-columns {
+		flex-wrap: nowrap;
+	}
+}
+
+@media only screen and (min-width: 800px) {
+	.wp-block-columns[class*='has-'] > * {
+		margin-right: var(--columns--width-gutter);
+		margin-left: var(--columns--width-gutter);
+	}
+	.wp-block-columns[class*='has-'] > *:first-child {
+		margin-right: 0;
+	}
+	.wp-block-columns[class*='has-'] > *:last-child {
+		margin-left: 0;
+	}
+	.wp-block-columns.alignfull {
+		padding-right: calc(2 * var(--global--spacing-unit));
+		padding-left: calc(2 * var(--global--spacing-unit));
+	}
+}
+
+.wp-block-media-text {
+	display: grid;
+	grid-template-rows: auto;
+	align-items: center;
+	grid-template-areas: "media-text-media media-text-content";
+	grid-template-columns: 50% auto;
+}
+
+.wp-block-media-text .wp-block-media-text__media {
+	grid-area: media-text-media;
+	margin: 0;
+}
+
+.wp-block-media-text .wp-block-media-text__content {
+	font-family: var(--heading--font-family);
+	word-break: break-word;
+	grid-area: media-text-content;
+	padding: 0 var(--global--spacing-unit);
+}
+
+.wp-block-media-text.is-stacked-on-mobile {
+	display: block;
+}
+
+.wp-block-media-text.is-stacked-on-mobile .wp-block-media-text__content {
+	padding: var(--global--spacing-unit) 0;
+}
+
+.wp-block-media-text.has-media-on-the-right {
+	grid-template-areas: "media-text-content media-text-media";
+	grid-template-columns: auto 50%;
+}
+
+@media only screen and (min-width: 800px) {
+	.wp-block-media-text.is-stacked-on-mobile {
+		display: grid;
+		grid-template-columns: 50% auto;
+	}
+	.wp-block-media-text.is-stacked-on-mobile .wp-block-media-text__content {
+		padding: 0 var(--global--spacing-unit);
+	}
+}
+
+.wp-block-media-text.is-stacked-on-mobile {
+	display: block;
+}
+
+.wp-block-media-text.is-stacked-on-mobile .wp-block-media-text__content {
+	padding: var(--global--spacing-unit) 0;
+}
+
+.wp-block-media-text.has-media-on-the-right {
+	grid-template-areas: "media-text-content media-text-media";
+	grid-template-columns: auto 50%;
+}
+
+@media only screen and (min-width: 800px) {
+	.wp-block-media-text.is-stacked-on-mobile {
+		display: grid;
+		grid-template-columns: 50% auto;
+	}
+	.wp-block-media-text.is-stacked-on-mobile .wp-block-media-text__content {
+		padding: 0 var(--global--spacing-unit);
+	}
+}
+
+.wp-block-spacer {
+	display: block;
+}
+
+/* WP Blocks */
+/*
+@import "sass/wp-blocks/posts-and-pages";
+@import "sass/wp-blocks/comments";
+
+@import "sass/wp-blocks/navigation/links";
+@import "sass/wp-blocks/navigation/menu-main-navigation";
+@import "sass/wp-blocks/navigation/menu-social-navigation";
+@import "sass/wp-blocks/navigation/menu-footer-navigation";
+@import "sass/wp-blocks/navigation/next-previous";
+*/
+/* Structure */
+/*
+@import "sass/structure/site-header";
+@import "sass/structure/site-featured-image";
+@import "sass/structure/site-footer";
+@import "sass/structure/archives";
+@import "sass/structure/widgets";
+*/

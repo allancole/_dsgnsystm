@@ -1,0 +1,52 @@
+/* Collect Root Variables??? */
+@mixin local-root-variables {
+    :root {
+        @content;
+    }
+}
+
+/* Responsive Styles */
+$breakpoint-sm: 600px;
+$breakpoint-md: 782px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;
+$breakpoint-xxl: 1440px;
+
+@mixin media( $res ) {
+
+	@if mobile-only == $res {
+		@media only screen and (max-width: #{$breakpoint-sm - 1}) {
+			@content;
+		}
+	}
+
+	@if mobile == $res {
+		@media only screen and (min-width: $breakpoint-sm) {
+			@content;
+		}
+	}
+
+	@if tablet == $res {
+		@media only screen and (min-width: $breakpoint-md) {
+			@content;
+		}
+	}
+
+	@if laptop == $res {
+		@media only screen and (min-width: $breakpoint-lg) {
+			@content;
+		}
+	}
+
+	@if desktop == $res {
+		@media only screen and (min-width: $breakpoint-xl) {
+			@content;
+		}
+	}
+
+	@if wide == $res {
+		@media only screen and (min-width: $breakpoint-xxl) {
+			@content;
+		}
+	}
+}

@@ -1,0 +1,388 @@
+/**
+ * These styles should be loaded by the Block Editor only
+ */
+/**
+ * Abstracts
+ * - Mixins, variables and functions
+ */
+/* Collect Root Variables??? */
+/* Responsive Styles */
+/**
+ * Base
+ * - Reset the browser
+ */
+html {
+  font-size: var(--global--font-size-base);
+  font-family: var(--global--font-secondary);
+  line-height: var(--global--font-line-height);
+}
+
+body {
+  font-size: var(--global--font-size-md);
+  font-weight: normal;
+  color: var(--global--color-foreground);
+  background-color: var(--global--color-background);
+}
+
+p {
+  line-height: var(--global--font-line-height);
+}
+
+a {
+  color: var(--global--color-primary);
+}
+
+a:hover {
+  color: var(--global--color-primary-hover);
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+/**
+ * Elements
+ * - Styles for basic HTML elemants
+ */
+/**
+ * Elements
+ * - Styles for basic HTML elemants
+ */
+blockquote p {
+  font-size: var(--heading--font-size-4);
+  letter-spacing: var(--heading--letter-spacing-4);
+  line-height: var(--heading--line-height);
+}
+
+blockquote cite,
+blockquote footer {
+  color: var(--global--color-foreground-light);
+  font-size: var(--global--font-size-sm);
+  letter-spacing: var(--global--letter-spacing-sm);
+}
+
+blockquote > * {
+  margin-top: var(--global--spacing-unit);
+  margin-bottom: var(--global--spacing-unit);
+}
+
+blockquote > *:first-child {
+  margin-top: 0;
+}
+
+blockquote > *:last-child {
+  margin-bottom: 0;
+}
+
+blockquote.alignleft p, blockquote.alignright p {
+  font-size: var(--heading--font-size-5);
+  max-width: inherit;
+  width: inherit;
+}
+
+blockquote.alignleft cite,
+blockquote.alignleft footer, blockquote.alignright cite,
+blockquote.alignright footer {
+  font-size: var(--global--font-size-xs);
+  letter-spacing: var(--global--letter-spacing-xs);
+}
+
+figcaption {
+  color: var(--global--color-foreground-light);
+  font-size: var(--global--font-size-xs);
+  margin-top: calc(0.5 * var(--global--spacing-unit));
+  margin-bottom: var(--global--spacing-unit);
+  text-align: center;
+}
+
+* > figure > img,
+* > figure > video {
+  max-width: unset;
+  width: 100%;
+  vertical-align: middle;
+}
+
+/* WP Smiley */
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+  border: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+  max-width: 100%;
+}
+
+/**
+ * Blocks
+ * - These styles replace key Gutenberg Block styles for fonts, colors, and
+ *   spacing with CSS-variables overrides
+ */
+/**
+ * Block Styles for the Editor
+ *
+ * - These styles replace key Gutenberg Block styles for fonts, colors, and
+ *   spacing with CSS-variables overrides in the Block Editor
+ * - In the future the Block styles may get compiled to individual .css
+ *   files and conditionally loaded
+ */
+:root {
+  --button--color-text: var(--global--color-background);
+  --button--color-text-hover: var(--button--color-text);
+  --button--color-background: var(--global--color-primary);
+  --button--color-background-hover: var(--global--color-primary-hover);
+  --button--font-family: var(--global--font-primary);
+  --button--font-size: var(--global--font-size-md);
+  --button--font-weight: bold;
+  --button--font-line-height: 1;
+  --button--border-radius: 9999px;
+  --button--spacing-unit: var(--global--spacing-unit);
+}
+
+.wp-block-button {
+  /* Default Style */
+  /* Outline Style */
+  /* Squared Style */
+}
+
+.wp-block-button .wp-block-button__link {
+  color: var(--button--color-text);
+  font-weight: var(--button--font-weight);
+  font-family: var(--button--font-family);
+  font-size: var(--button--font-size);
+  line-height: var(--button--font-line-height);
+  background-color: var(--button--color-background);
+  border-radius: var(--button--border-radius);
+  padding: var(--button--spacing-unit) calc(1.5 * var(--button--spacing-unit));
+}
+
+.wp-block-button .wp-block-button__link:hover, .wp-block-button .wp-block-button__link:focus, .wp-block-button .wp-block-button__link.has-focus {
+  color: var(--button--color-text-hover);
+  background-color: var(--button--color-background-hover);
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link {
+  color: var(--button--color-background);
+  background: transparent;
+  border: 2px solid currentcolor;
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link:hover, .wp-block-button.is-style-outline .wp-block-button__link:focus, .wp-block-button.is-style-outline .wp-block-button__link.has-focus {
+  color: var(--button--color-background-hover);
+}
+
+.wp-block-button.is-style-squared .wp-block-button__link {
+  border-radius: 0;
+}
+
+:root {
+  --heading--font-family: var(--global--font-primary);
+  --heading--font-size-6: var(--global--font-size-base);
+  --heading--font-size-5: var(--global--font-size-md);
+  --heading--font-size-4: var(--global--font-size-lg);
+  --heading--font-size-3: var(--global--font-size-xl);
+  --heading--font-size-2: var(--global--font-size-xxl);
+  --heading--font-size-1: var(--global--font-size-xxxl);
+  --heading--letter-spacing-6: var(--global--letter-spacing-md);
+  --heading--letter-spacing-5: var(--global--letter-spacing-md);
+  --heading--letter-spacing-4: var(--global--letter-spacing-lg);
+  --heading--letter-spacing-3: var(--global--letter-spacing-xl);
+  --heading--letter-spacing-2: var(--global--letter-spacing-xxl);
+  --heading--letter-spacing-1: var(--global--letter-spacing-xxxl);
+  --heading--line-height: 1.25em;
+  --heading--font-weight: 600;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-family: var(--heading--font-family);
+  font-weight: var(--heading--font-weight);
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4 {
+  line-height: var(--heading--line-height);
+}
+
+h5, .h5,
+h6, .h6 {
+  line-height: var(--global--font-line-height);
+}
+
+h1, .h1 {
+  font-size: var(--heading--font-size-1);
+  letter-spacing: var(--heading--letter-spacing-1);
+}
+
+h2, .h2 {
+  font-size: var(--heading--font-size-2);
+  letter-spacing: var(--heading--letter-spacing-2);
+}
+
+h3, .h3 {
+  font-size: var(--heading--font-size-3);
+  letter-spacing: var(--heading--letter-spacing-3);
+}
+
+h4, .h4 {
+  font-size: var(--heading--font-size-4);
+  letter-spacing: var(--heading--letter-spacing-4);
+}
+
+h5, .h5 {
+  font-size: var(--heading--font-size-5);
+  letter-spacing: var(--heading--letter-spacing-5);
+}
+
+h6, .h6 {
+  font-size: var(--heading--font-size-6);
+  letter-spacing: var(--heading--letter-spacing-6);
+}
+
+:root {
+  --pullquote--width-border: 4px;
+}
+
+:root {
+  --quote--border-color: var(--global--color-primary);
+}
+
+.wp-block-quote {
+  border-left: 4px solid var(--quote--border-color);
+  margin: var(--global--vertical-spacing-unit) 0;
+  padding-left: var(--global--spacing-unit);
+}
+
+.wp-block-quote p {
+  font-size: var(--heading--font-size-4);
+  letter-spacing: var(--heading--letter-spacing-4);
+  line-height: var(--global--font-line-height);
+}
+
+.wp-block-quote.is-large, .wp-block-quote.is-style-large {
+  border: none;
+  padding: 0 var(--global--spacing-unit);
+}
+
+.wp-block-quote.is-large p, .wp-block-quote.is-style-large p {
+  font-size: var(--heading--font-size-3);
+  letter-spacing: var(--heading--letter-spacing-3);
+  line-height: var(--heading--line-height);
+}
+
+:root {
+  --separator--height: 2px;
+  --separator--vertical-spacing-unit: calc(2 * var(--global--vertical-spacing-unit));
+}
+
+.wp-block-separator,
+hr {
+  border-bottom: var(--separator--height) solid var(--global--color-border);
+}
+
+.wp-block-separator[style*="text-align:right"], .wp-block-separator[style*="text-align: right"],
+hr[style*="text-align:right"],
+hr[style*="text-align: right"] {
+  border-right-color: var(--quote--border-color);
+}
+
+.wp-block-separator.is-style-wide,
+hr.is-style-wide {
+  border-bottom-width: var(--separator--height);
+}
+
+.wp-block-separator.is-style-dots,
+hr.is-style-dots {
+  border-bottom: none;
+}
+
+.wp-block-separator.is-style-dots:before,
+hr.is-style-dots:before {
+  color: var(--global--color-border);
+}
+
+table th,
+.wp-block-table th {
+  font-family: var(--heading--font-family);
+}
+
+table td,
+table th,
+.wp-block-table td,
+.wp-block-table th {
+  padding: calc( 0.5 * var(--global--spacing-unit));
+}
+
+/**
+ * Editor Post Title
+ * - Needs a special styles
+ */
+.editor-post-title__block .editor-post-title__input {
+  color: var(--global--color-foreground);
+  font-family: var(--heading--font-family);
+  font-weight: var(--heading--font-weight);
+  font-size: var(--heading--font-size-2);
+  letter-spacing: var(--heading--letter-spacing-1);
+  line-height: var(--heading--line-height);
+}
+
+.is-small-text,
+.has-small-font-size {
+  font-size: var(--global--font-size-sm);
+}
+
+.is-regular-text,
+.has-regular-font-size,
+.has-normal-font-size,
+.has-medium-font-size {
+  font-size: var(--global--font-size-md);
+}
+
+.is-large-text,
+.has-large-font-size {
+  font-size: var(--heading--font-size-3);
+  line-height: var(--heading--line-height);
+}
+
+.is-larger-text,
+.has-larger-font-size,
+.has-huge-font-size {
+  font-size: var(--heading--font-size-1);
+  line-height: var(--heading--line-height);
+}
+
+.has-drop-cap:not(:focus)::first-letter {
+  font-family: var(--heading--font-family);
+  font-size: calc(2 * var(--heading--font-size-1));
+  font-weight: var(--heading--font-weight);
+}
+
+/*
+@import "columns/editor";
+@import "file/editor";
+@import "gallery/editor";
+@import "heading/editor";
+@import "image/editor";
+@import "latest-comments/editor";
+@import "legacy/editor"; // "Blocks" from the legacy WP editor, ie: galleries, .button class, etc.
+@import "list/editor";
+@import "media-text/editor";
+@import "paragraph/editor";
+@import "separator/editor";
+@import "spacer/editor";
+@import "video/editor";
+@import "utilities"; // Import LAST to cascade properly
+*/

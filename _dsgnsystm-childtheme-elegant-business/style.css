@@ -1,0 +1,98 @@
+/*
+Theme Name: _Dsgnsystm (Elegant Business)
+Theme URI: https://github.com/Automattic/one-theme-next-steps
+Author: the WordPress team
+Author URI: https://wordpress.org/
+Template: _dsgnsystm
+Description: Our 2019 default theme is designed to show off the power of the block editor. It features custom styles for all the default blocks, and is built so that what you see in the editor looks like what you'll see on your website. Twenty Nineteen is designed to be adaptable to a wide range of websites, whether you’re running a photo blog, launching a new business, or supporting a non-profit. Featuring ample whitespace and modern sans-serif headlines paired with classic serif body text, it's built to be beautiful on all screen sizes.
+Requires at least: WordPress 4.9.6
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: _dsgnsystm-elegant-business
+Tags: one-column, flexible-header, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, rtl-language-support, sticky-post, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Twenty Nineteen is based on Underscores https://underscores.me/, (C) 2012-2018 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,700&display=swap');
+
+:root {
+
+	/* Fonts & Typography */
+	--global--font-primary: 'Source Serif Pro', serif;
+	--global--font-secondary: var(--global--font-primary);
+
+	--global--font-size-base: 22px;
+	--global--font-line-height: 1.8em;
+	--global--letter-spacing-xs: 0;
+	--global--letter-spacing-sm: 0;
+
+	/* Colors */
+	--global--color-primary: #c43d80;
+	--global--color-primary-hover: var(--global--color-black);
+	--global--color-secondary: #111111;
+	--global--color-secondary-hover: #4a4a4a;
+
+	/* Button */
+	--button--color-background: var(--global--color-primary);
+	--button--color-background-hover: var(--global--color-primary-hover);
+	--button--font-family: var(--global--font-ui);
+	--button--spacing-unit: 16px;
+
+	/* Headings */
+	--heading--font-size-6: var(--global--font-size-sm);
+	--heading--font-size-5: var(--global--font-size-base);
+	--heading--font-size-4: var(--global--font-size-md);
+	--heading--font-size-3: var(--global--font-size-lg);
+	--heading--font-size-2: var(--global--font-size-xl);
+	--heading--font-size-1: var(--global--font-size-xxl);
+
+	/* Site Branding */
+	--site-branding--color-link: var(--global--color-secondary);
+	--site-branding--color-link-hover: var(--global--color-secondary-hover);
+}
+
+a {
+	text-decoration: none;
+}
+
+.site-branding,
+.site-info,
+.entry-header,
+.entry-footer,
+.page-title,
+.author-title,
+.comments-title,
+.comment-reply-title {
+	text-align: center;
+}
+
+.comment-reply-title {
+	display: inherit;
+}
+
+.comment .comment-reply-title {
+	display: flex;
+}
+
+.site-description {
+	font-size: var(--global--font-size-xs);
+	line-height: var(--heading--line-height);
+}
+
+.main-navigation > div > ul,
+.social-navigation > div > ul {
+	justify-content: center;
+}
+
+.wp-block-media-text + .wp-block-media-text:not(.alignfull) {
+	margin-top: calc(-1 * var(--global--vertical-spacing-unit));
+}

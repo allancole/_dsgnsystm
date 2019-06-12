@@ -1,0 +1,216 @@
+/*
+Theme Name: _Dsgnsystm (Starter)
+Theme URI: https://github.com/Automattic/one-theme-next-steps
+Author: the WordPress team
+Author URI: https://wordpress.org/
+Template: _dsgnsystm
+Description: Our 2019 default theme is designed to show off the power of the block editor. It features custom styles for all the default blocks, and is built so that what you see in the editor looks like what you'll see on your website. Twenty Nineteen is designed to be adaptable to a wide range of websites, whether you’re running a photo blog, launching a new business, or supporting a non-profit. Featuring ample whitespace and modern sans-serif headlines paired with classic serif body text, it's built to be beautiful on all screen sizes.
+Requires at least: WordPress 4.9.6
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: _dsgnsystm-starter
+Tags: one-column, flexible-header, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, rtl-language-support, sticky-post, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Twenty Nineteen is based on Underscores https://underscores.me/, (C) 2012-2018 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+:root {
+
+	/**
+	 * Globals
+	 */
+
+	/* Fonts & Typography */
+	--global--font-primary: sans-serif;
+	--global--font-secondary: serif;
+	--global--font-code: monospace, monospace;
+	--global--font-ui: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+
+	--global--font-size-base: 1em;
+	--global--font-size-xs: 0.66em;
+	--global--font-size-sm: 0.875em;
+	--global--font-size-md: 1.125em;
+	--global--font-size-lg: 1.5em;
+	--global--font-size-xl: 2em;
+	--global--font-size-xxl: 2.625em;
+	--global--font-size-xxxl: 3.375em;
+
+	--global--font-line-height: 1.75em;
+
+	--global--letter-spacing-xs: 0.125em;
+	--global--letter-spacing-sm: 0.0625em;
+	--global--letter-spacing-md: 0;
+	--global--letter-spacing-lg: 0;
+	--global--letter-spacing-xl: 0;
+	--global--letter-spacing-xxl: -0.0125em;
+	--global--letter-spacing-xxxl: -0.025em;
+
+	/* Colors */
+	--global--color-primary: blue;
+	--global--color-primary-hover: indigo;
+	--global--color-secondary: red;
+	--global--color-secondary-hover: darkred;
+	--global--color-black: black;
+	--global--color-white: white;
+	--global--color-foreground: #111111;
+	--global--color-background: var(--global--color-white);
+	--global--color-border: #dddddd;
+
+	/* Spacing */
+	--global--spacing-unit: 1rem;
+	--global--horizontal-spacing-unit: var(--global--spacing-unit);
+	--global--vertical-spacing-unit: 32px; /* 32px matches default spacing in the editor. */
+
+	/* Elevation */
+	--global--elevation-1: 0px 0px 4px 2px rgba( 0, 0, 0, 0.2 );
+	--global--elevation-2: 0px 0px 8px 2px rgba( 0, 0, 0, 0.2 );
+	--global--elevation-3: 2px 2px 4px 2px rgba( 0, 0, 0, 0.2 );
+	--global--elevation-4: 2px 2px 8px 0px rgba( 0, 0, 0, 0.2 );
+	--global--elevation-5: 4px 4px 8px 0px rgba( 0, 0, 0, 0.2 );
+
+	/* Other */
+	--global--border-radius: calc(0.5 * var(--global--spacing-unit));
+
+	/**
+	 * Elements
+	 */
+
+	/* Button */
+	--button--color-text: var(--global--color-background);
+	--button--color-text-hover: var(--button--color-text);
+	--button--color-background: var(--global--color-primary);
+	--button--color-background-hover: var(--global--color-primary-hover);
+
+	--button--font-family: var(--global--font-primary);
+	--button--font-size: var(--global--font-size-md);
+	--button--font-weight: bold;
+	--button--font-line-height: 1;
+
+	--button--border-radius: 9999px;
+
+	--button--spacing-unit: var(--global--spacing-unit);
+
+	/* Lists */
+	--list--font-family: var(--global--font-secondary);
+	--definition-term--font-family: var(--global--font-primary);
+
+	/* Forms */
+	--form--font-family: var(--global--font-secondary);
+	--form--font-size: var(--global--font-size-md);
+	--form--line-height: var(--heading-line-height);
+
+	--form--color-text: var(--global--color-foreground);
+	--form--color-border: var(--global--color-border);
+
+	--form--border-width: 1px;
+	--form--border-radius: 3px;
+
+	--form--spacing-unit: calc(0.33 * var(--global--spacing-unit));
+
+	/* Headings */
+	--heading--font-family: var(--global--font-primary);
+
+	--heading--font-size-6: var(--global--font-size-base);
+	--heading--font-size-5: var(--global--font-size-md);
+	--heading--font-size-4: var(--global--font-size-lg);
+	--heading--font-size-3: var(--global--font-size-xl);
+	--heading--font-size-2: var(--global--font-size-xxl);
+	--heading--font-size-1: var(--global--font-size-xxxl);
+
+	--heading--letter-spacing-6: var(--global--letter-spacing-md);
+	--heading--letter-spacing-5: var(--global--letter-spacing-md);
+	--heading--letter-spacing-4: var(--global--letter-spacing-lg);
+	--heading--letter-spacing-3: var(--global--letter-spacing-xl);
+	--heading--letter-spacing-2: var(--global--letter-spacing-xxl);
+	--heading--letter-spacing-1: var(--global--letter-spacing-xxxl);
+
+	--heading--line-height: 1.25em;
+	--heading--font-weight: 600;
+
+	/**
+	 * Blocks
+	 */
+
+	/* Cover Block */
+	--cover--height: calc( 15 * var(--global--vertical-spacing-unit) );
+
+	/* Pullquote Block */
+	--pullquote--width-border: 4px;
+
+	/* Quote Block */
+	--quote--border-color: var(--global--color-primary);
+
+	/* Separator Block */
+	--separator--height: 2px;
+	--separator--vertical-spacing-unit: calc(2 * var(--global--vertical-spacing-unit));
+
+	/**
+	 * WP-Blocks
+	 */
+
+	/* Site Branding */
+	--site-branding--font-title: var(--global--font-primary);
+	--site-branding--font-title-weight: bold;
+	--site-branding--font-description: var(--global--color-foreground);
+
+	--site-branding--color-link: var(--global--color-primary);
+	--site-branding--color-link-hover: var(--global--color-primary-hover);
+	--site-branding--color-text: var(--global--color-foreground);
+
+	/* Main Navigation */
+	--site-main-nav--font-title: var(--global--font-primary);
+	--site-main-nav--font-title-weight: bold;
+	--site-main-nav--font-description: var(--global--color-foreground);
+
+	--site-main-nav--color-link: var(--global--color-primary);
+	--site-main-nav--color-link-hover: var(--global--color-primary-hover);
+	--site-main-nav--color-text: var(--global--color-foreground);
+
+	--site-main-nav--padding: calc(0.66 * var(--global--spacing-unit) );
+}
+
+/**
+ * Responsive width-content overrides
+ */
+
+:root {
+	--global--width-content: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+	:root {
+		--global--width-content: calc( 600px - (2 * var(--global--spacing-unit)));
+	}
+}
+
+@media only screen and (min-width: 782px) {
+	:root {
+		--global--width-content: calc( 782px - (2 * var(--global--spacing-unit)));
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	:root {
+		--global--width-content: calc( 1024px - (2 * var(--global--spacing-unit)));
+	}
+}
+
+@media only screen and (min-width: 1280px) {
+	:root {
+		--global--width-content: calc( 1024px - (2 * var(--global--spacing-unit)));
+	}
+}
+
+@media only screen and (min-width: 1440px) {
+	:root {
+		--global--width-content: calc( 1024px - (2 * var(--global--spacing-unit)));
+	}
+}

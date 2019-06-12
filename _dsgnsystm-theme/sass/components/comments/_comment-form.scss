@@ -1,0 +1,53 @@
+.comment-respond > * {
+	margin-top: var(--global--vertical-spacing-unit);
+	margin-bottom: var(--global--vertical-spacing-unit);
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.comment-form > p {
+	margin-top: var(--global--vertical-spacing-unit);
+	margin-bottom: var(--global--vertical-spacing-unit);
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	label,
+	input[type="email"],
+	input[type="text"],
+	input[type="url"],
+	textarea {
+		width: 100%;
+	}
+
+	@include media(mobile) {
+		display: flex;
+
+		label {
+			width: 25%;
+		}
+
+		input[type="email"],
+		input[type="text"],
+		input[type="url"],
+		textarea {
+			width: 75%;
+		}
+
+		&.comment-notes,
+		&.logged-in-as {
+			display: block;
+		}
+	}
+}
