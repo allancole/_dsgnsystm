@@ -12,7 +12,8 @@ At it’s simplest, this tool connects Typographic, Color, and Spacing decsions 
 5. If you’re feeling really experimental, make a copy of the one the child themes and try to roll out your own original theme design by only changing the available CSS-variables.
 
 ### Future thinking
-tbd
+- Make a plugin version of this system
+- Add the CSS-variables to Gutenberg itself
 
 ### Other notes
-tbd
+- The buildtool in the `_dsgnsystm-theme` is not setup properly—please **do not** use it. For now, you can use Codekit but eventually it will be replaced by a working build tool. 
