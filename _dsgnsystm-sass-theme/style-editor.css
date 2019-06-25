@@ -39,6 +39,15 @@
  * Heading
  */
 /**
+ * List
+ */
+/**
+ * Pullquote
+ */
+/**
+ * Quote
+ */
+/**
  * Separator
  */
 /* Collect Root Variables??? */
@@ -47,7 +56,7 @@
  * - Reset the browser
  */
 html {
-  font-size: 1rem;
+  font-size: 20px;
   font-family: serif;
   line-height: 1.75em;
 }
@@ -93,12 +102,12 @@ blockquote p {
 blockquote cite,
 blockquote footer {
   font-size: 0.875rem;
-  letter-spacing: 0.0625em;
+  letter-spacing: 0;
 }
 
 blockquote > * {
-  margin-top: 32px;
-  margin-bottom: 32px;
+  margin-top: 18px;
+  margin-bottom: 18px;
 }
 
 blockquote > *:first-child {
@@ -119,15 +128,21 @@ blockquote.alignleft cite,
 blockquote.alignleft footer, blockquote.alignright cite,
 blockquote.alignright footer {
   font-size: 0.66rem;
-  letter-spacing: 0.125em;
+  letter-spacing: 0.0625em;
 }
 
 figcaption {
   color: #767676;
   font-size: 0.66rem;
+  line-height: 1.75em;
   margin-top: calc(0.5 * 32px);
   margin-bottom: 32px;
   text-align: center;
+}
+
+.alignleft figcaption,
+.alignright figcaption {
+  margin-bottom: 0;
 }
 
 * > figure > img,
@@ -239,7 +254,7 @@ h5, .h5 {
 }
 
 h6, .h6 {
-  font-size: 1rem;
+  font-size: 20px;
   letter-spacing: 0;
 }
 
@@ -307,7 +322,7 @@ hr.is-style-dots:before {
 
 table th,
 .wp-block-table th {
-  font-family: var(--heading--font-family);
+  font-family: sans-serif;
 }
 
 table td,

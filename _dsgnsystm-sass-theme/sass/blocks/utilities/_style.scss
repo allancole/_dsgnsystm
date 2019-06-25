@@ -65,14 +65,14 @@
 .is-large-text,
 .has-large-font-size {
 	font-size: #{map-deep-get($config-heading, "font", "size", "h3")};
-	line-height: #{map-deep-get($config-heading, "font", "line-height", "heading")};
+	line-height: #{map-deep-get($config-global, "font", "line-height", "heading")};
 }
 
 .is-larger-text,
 .has-larger-font-size,
 .has-huge-font-size {
 	font-size: #{map-deep-get($config-heading, "font", "size", "h1")};
-	line-height: #{map-deep-get($config-heading, "font", "line-height", "heading")};
+	line-height: #{map-deep-get($config-global, "font", "line-height", "heading")};
 }
 
 // Drop caps

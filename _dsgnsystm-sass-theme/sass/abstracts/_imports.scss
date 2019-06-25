@@ -4,9 +4,10 @@
  */
 
 @import "functions";
-@import "global-variables";
-@import "block-variables";
-@import "component-variables";
+@import "config-global";
+@import "config-blocks";
+@import "config-components";
+@import "config-elements";
 @import "mixins";
 
 :root {

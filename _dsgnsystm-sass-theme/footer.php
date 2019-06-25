@@ -25,7 +25,7 @@
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', '_dsgnsystm-sass' ) ); ?>" class="imprint">
 				<?php
 				/* translators: %s: WordPress. */
-				printf( __( 'Proudly powered by %s.', '_dsgnsystm-sass' ), 'WordPress' );
+				printf( __( 'proudly powered by %s.', '_dsgnsystm-sass' ), 'WordPress' );
 				?>
 			</a>
 			<?php

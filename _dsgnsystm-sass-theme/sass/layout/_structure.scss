@@ -62,16 +62,11 @@
 
 /*
  * Block & non-gutenberg content wrapper children
- * - Sets vertical margins
+ * - Sets spacing-vertical margins
  */
-.site-header > *,
 .site-footer > *,
-.site-main > article > *, // apply margins to article level
-.entry-header > *,
-.post-thumbnail > *,
+.site-main > article > *, // apply vertical margins to article level
 .entry-content > *,
-.comment-content > *,
-.author-bio > *,
 .widget-area > * {
 
 	margin-top: map-deep-get($config-global, "spacing", "vertical");
@@ -85,6 +80,29 @@
 		margin-bottom: 0;
 	}
 }
+
+/*
+ * Block & non-gutenberg content wrapper children
+ * - Sets spacing-unit margins
+ */
+.site-header > *,
+.entry-header > *,
+.post-thumbnail > *,
+.entry-content > *,
+.comment-content > *,
+.author-bio > * {
+	margin-top: map-deep-get($config-global, "spacing", "unit");
+	margin-bottom: map-deep-get($config-global, "spacing", "unit");
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
 
 /*
  * .entry-content children specific controls

@@ -1,6 +1,6 @@
 .comment-respond > * {
-	margin-top: var(--global--vertical-spacing-unit);
-	margin-bottom: var(--global--vertical-spacing-unit);
+	margin-top: #{map-deep-get($config-global, "spacing", "vertical")};
+	margin-bottom: #{map-deep-get($config-global, "spacing", "vertical")};
 
 	&:first-child {
 		margin-top: 0;
@@ -12,8 +12,8 @@
 }
 
 .comment-form > p {
-	margin-top: var(--global--vertical-spacing-unit);
-	margin-bottom: var(--global--vertical-spacing-unit);
+	margin-top: #{map-deep-get($config-global, "spacing", "vertical")};
+	margin-bottom: #{map-deep-get($config-global, "spacing", "vertical")};
 
 	&:first-child {
 		margin-top: 0;

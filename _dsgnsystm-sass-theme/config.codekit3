@@ -844,7 +844,7 @@
 		"oAP": "/readme.txt",
 		"oF": 0
 		},
-	"/sass/abstracts/_block-variables.scss": {
+	"/sass/abstracts/_config-blocks.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -852,12 +852,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/sass/abstracts/_block-variables.css",
+		"oAP": "/sass/abstracts/_config-blocks.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/sass/abstracts/_component-variables.scss": {
+	"/sass/abstracts/_config-components.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -865,7 +865,33 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/sass/abstracts/_component-variables.css",
+		"oAP": "/sass/abstracts/_config-components.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/sass/abstracts/_config-elements.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/sass/abstracts/_config-elements.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/sass/abstracts/_config-global.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/sass/abstracts/_config-global.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -879,19 +905,6 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/sass/abstracts/_functions.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"/sass/abstracts/_global-variables.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/sass/abstracts/_global-variables.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -1195,6 +1208,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"/sass/blocks/button/_config.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/sass/blocks/button/_config.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"/sass/blocks/button/_editor.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -1217,19 +1243,6 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/sass/blocks/button/_style.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"/sass/blocks/button/_variables.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/sass/blocks/button/_variables.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -1286,6 +1299,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"/sass/blocks/cover/_config.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/sass/blocks/cover/_config.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"/sass/blocks/cover/_editor.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -1308,19 +1334,6 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/sass/blocks/cover/_style.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"/sass/blocks/cover/_variables.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/sass/blocks/cover/_variables.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -1377,6 +1390,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"/sass/blocks/heading/_config.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/sass/blocks/heading/_config.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"/sass/blocks/heading/_editor.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -1399,19 +1425,6 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/sass/blocks/heading/_style.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"/sass/blocks/heading/_variables.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/sass/blocks/heading/_variables.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -1494,6 +1507,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"/sass/blocks/list/_config.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/sass/blocks/list/_config.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"/sass/blocks/list/_editor.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -1572,6 +1598,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"/sass/blocks/pullquote/_config.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/sass/blocks/pullquote/_config.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"/sass/blocks/pullquote/_editor.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -1594,6 +1633,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/sass/blocks/pullquote/_style.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/sass/blocks/quote/_config.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/sass/blocks/quote/_config.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -1624,6 +1676,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"/sass/blocks/separator/_config.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/sass/blocks/separator/_config.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"/sass/blocks/separator/_editor.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -1646,19 +1711,6 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/sass/blocks/separator/_style.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"/sass/blocks/separator/_variables.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/sass/blocks/separator/_variables.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -1819,6 +1871,71 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"/sass/components/content/_author-bio.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/sass/components/content/_author-bio.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/sass/components/content/_entry-content.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/sass/components/content/_entry-content.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/sass/components/content/_entry-header.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/sass/components/content/_entry-header.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/sass/components/content/_post-thumbnail.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/sass/components/content/_post-thumbnail.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/sass/components/footer/_config.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/sass/components/footer/_config.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"/sass/components/footer/_footer-branding.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -1858,6 +1975,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"/sass/components/header/_config.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/sass/components/header/_config.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"/sass/components/header/_header.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -1884,7 +2014,7 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"/sass/components/header/_site-navigation.scss": {
+	"/sass/components/header/_site-main-navigation.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -1892,7 +2022,7 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/sass/components/header/_site-navigation.css",
+		"oAP": "/sass/components/header/_site-main-navigation.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -1906,97 +2036,6 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/sass/components/header/_site-social-navigation.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"/sass/components/header/_variables.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/sass/components/header/_variables.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"/sass/components/legacy/_archives.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/sass/components/legacy/_archives.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"/sass/components/legacy/_comments.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/sass/components/legacy/_comments.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"/sass/components/legacy/_posts-and-pages.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/sass/components/legacy/_posts-and-pages.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"/sass/components/legacy/_site-featured-image.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/sass/components/legacy/_site-featured-image.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"/sass/components/legacy/_site-footer.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/sass/components/legacy/_site-footer.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"/sass/components/legacy/_site-header.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/sass/components/legacy/_site-header.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -2036,6 +2075,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/sass/elements/_blockquote.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/sass/elements/_config.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/sass/elements/_config.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1

@@ -1,7 +1,3 @@
-:root {
-	--pullquote--width-border: 4px;
-}
-
 .wp-block-pullquote {
 	padding: calc( 3 * #{map-deep-get($config-global, "spacing", "unit")} ) 0;
 	margin-left: 0;
@@ -9,9 +5,9 @@
 	text-align: center;
 	// Theme?
 	border-top-color: #{map-deep-get($config-global, "color", "border")};
-	border-top-width: 4px;
+	border-top-width: #{map-deep-get($config-pullquote, "border", "width")};
 	border-bottom-color: #{map-deep-get($config-global, "color", "border")};
-	border-bottom-width: 4px;
+	border-bottom-width: #{map-deep-get($config-pullquote, "border", "width")};
 	color: #{map-deep-get($config-global, "color", "foreground")};
 
 	p {

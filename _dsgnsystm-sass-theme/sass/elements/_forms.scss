@@ -1,27 +1,3 @@
-$config-form: (
-
-	// Colors
-	"color": (
-		"text": map-deep-get($config-global, "color", "foreground"),
-		"border": map-deep-get($config-global, "color", "border"),
-		"border-focus": map-deep-get($config-global, "color", "primary-hover"),
-	),
-
-	"font": (
-		"family": map-deep-get($config-global, "font", "family", "secondary"),
-		"line-height": map-deep-get($config-global, "font", "line-height", "md"),
-		"size": map-deep-get($config-global, "font", "size", "md"),
-		"weight": bold,
-	),
-
-	"border": (
-		"width": 1px,
-		"radius": 3px,
-	),
-
-	"padding": calc( 0.33 * #{map-deep-get($config-global, "spacing", "unit")} ),
-);
-
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -38,22 +14,22 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-	color: #{map-deep-get($config-form, "color", "text")};
-	border: #{map-deep-get($config-form, "border", "width")} solid #{map-deep-get($config-form, "color", "border")};
-	border-radius: #{map-deep-get($config-form, "border", "radius")};
-	padding: #{map-deep-get($config-form, "border", "padding")};
+	color: #{map-deep-get($config-elements, "form", "color", "text")};
+	border: #{map-deep-get($config-elements, "form", "border", "width")} solid #{map-deep-get($config-elements, "form", "color", "border")};
+	border-radius: #{map-deep-get($config-elements, "form", "border", "radius")};
+	padding: #{map-deep-get($config-elements, "form", "border", "padding")};
 
 	&:focus {
-		color: #{map-deep-get($config-form, "color", "text")};
-		border-color: #{map-deep-get($config-form, "color", "border-focus")};
+		color: #{map-deep-get($config-elements, "form", "color", "text")};
+		border-color: #{map-deep-get($config-elements, "form", "color", "border-focus")};
 	}
 }
 
 select {
-	border: #{map-deep-get($config-form, "border", "width")} solid #{map-deep-get($config-form, "color", "border")};
+	border: #{map-deep-get($config-elements, "form", "border", "width")} solid #{map-deep-get($config-elements, "form", "color", "border")};
 }
 
 textarea {
-	padding: #{map-deep-get($config-form, "border", "padding")};
+	padding: #{map-deep-get($config-elements, "form", "border", "padding")};
 	width: 100%;
 }

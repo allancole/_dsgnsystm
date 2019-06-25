@@ -4,8 +4,8 @@
 .comments-area {
 
 	& > * {
-		margin-top: var(--global--vertical-spacing-unit);
-		margin-bottom: var(--global--vertical-spacing-unit);
+		margin-top: #{map-deep-get($config-global, "spacing", "vertical")};
+		margin-bottom: #{map-deep-get($config-global, "spacing", "vertical")};
 
 		&:first-child {
 			margin-top: 0;
@@ -22,21 +22,21 @@
  */
 
 .comments-title {
-	font-size: var(--heading--font-size-3);
-	letter-spacing: var(--heading--letter-spacing-3);
+	font-size: #{map-deep-get($config-heading, "font", "size", "h3")};
+	letter-spacing: #{map-deep-get($config-heading, "font", "letter-spacing", "h3")};
 }
 
 .comment-reply-title {
-	font-size: var(--global--font-size-md);
+	font-size: #{map-deep-get($config-global, "font", "size", "md")};
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 
 	small {
-		font-size: var(--global--font-size-base);
-		font-family: var(--global--font-secondary);
+		font-size: #{map-deep-get($config-global, "font", "size", "base")};
+		font-family: #{map-deep-get($config-global, "font", "family", "secondary")};
 		letter-spacing: normal;
-		line-height: var(--heading--line-height);
+		line-height: #{map-deep-get($config-global, "font", "line-height", "heading")};
 	}
 }
 
@@ -45,14 +45,14 @@
  */
 
 .comment-list {
-	border-bottom: 1px solid var(--global--color-border);
+	border-bottom: 1px solid #{map-deep-get($config-global, "color", "border")};
 	margin-left: 0;
 	list-style: none;
 
 	> li {
-		border-top: 1px solid var(--global--color-border);
-		margin-top: var(--global--vertical-spacing-unit);
-		margin-bottom: var(--global--vertical-spacing-unit);
+		border-top: 1px solid #{map-deep-get($config-global, "color", "border")};
+		margin-top: #{map-deep-get($config-global, "spacing", "vertical")};
+		margin-bottom: #{map-deep-get($config-global, "spacing", "vertical")};
 	}
 }
 
@@ -77,7 +77,7 @@
 
 .comment-meta {
 
-	$avatar-size: 32px;
+	$avatar-size: #{map-deep-get($config-global, "spacing", "vertical")};
 
 	margin-right: calc( $avatar-size + (0.5 * #{map-deep-get($config-global, "spacing", "horizontal")}) );
 
@@ -108,14 +108,14 @@
 
 	.comment-metadata {
 
-		color: var(--global--color-foreground);
+		color: #{map-deep-get($config-global, "color", "foreground")};
 
 		a {
 			color: currentColor;
 
 			&:hover,
 			&:active {
-				color: var(--global--color-primary-hover);
+				color: #{map-deep-get($config-global, "color", "primary-hover")};
 			}
 		}
 	}
@@ -129,8 +129,8 @@
 
 .comment-metadata,
 .reply {
-	font-size: var(--global--font-size-xs);
-	line-height: var(--heading--line-height);
+	font-size: #{map-deep-get($config-global, "font", "size", "xs")};
+	line-height: #{map-deep-get($config-global, "font", "line-height", "heading")};
 }
 
 .reply {
@@ -151,7 +151,7 @@
 .comment-author .fn,
 .pingback .url,
 .trackback .url {
-	font-family: var(--global--font-primary);
+	font-family: #{map-deep-get($config-global, "font", "family", "primary")};
 }
 
 /**
@@ -178,8 +178,8 @@
 
 .pingback .comment-body,
 .trackback .comment-body {
-	margin-top: var(--global--vertical-spacing-unit);
-	margin-bottom: var(--global--vertical-spacing-unit);
+	margin-top: #{map-deep-get($config-global, "spacing", "vertical")};
+	margin-bottom: #{map-deep-get($config-global, "spacing", "vertical")};
 }
 
 /**

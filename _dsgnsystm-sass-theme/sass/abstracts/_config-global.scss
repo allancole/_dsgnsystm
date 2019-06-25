@@ -2,6 +2,7 @@
 	// empty for now
 }
 
+// Vertical Rhythm Multiplier
 $baseline-unit: 8px;
 
 $config-global: (
@@ -17,7 +18,7 @@ $config-global: (
 		),
 		/* Font Size */
 		"size": (
-			"base": 1rem,
+			"base": #{2.5 * $baseline-unit},
 			"xs": 0.66rem,
 			"sm": 0.875rem,
 			"md": 1.125rem,
@@ -29,8 +30,8 @@ $config-global: (
 		/* Letter Spacing */
 		"letter-spacing": (
 			"base": 0,
-			"xs": 0.125em,
-			"sm": 0.0625em,
+			"xs": 0.0625em,
+			"sm": 0,
 			"md": 0,
 			"lg": 0,
 			"xl": 0,
@@ -87,11 +88,11 @@ $config-global: (
 	/* Elevation */
 	"elevation": (
 		"none": 0px 0px 0px 0px rgba( 0, 0, 0, 0 ),
-		"xs": 0px 0px 4px 2px rgba( 0, 0, 0, 0.2 ),
-		"sm": 0px 0px 8px 2px rgba( 0, 0, 0, 0.2 ),
-		"md": 2px 2px 4px 2px rgba( 0, 0, 0, 0.2 ),
-		"lg": 2px 2px 8px 0px rgba( 0, 0, 0, 0.2 ),
-		"xl": 4px 4px 8px 0px rgba( 0, 0, 0, 0.2 ),
+		"2dp": 0px 0px 4px 2px rgba( 0, 0, 0, 0.2 ),
+		"4dp": 0px 0px 8px 2px rgba( 0, 0, 0, 0.2 ),
+		"6dp": 2px 2px 4px 2px rgba( 0, 0, 0, 0.2 ),
+		"8dp": 2px 2px 8px 0px rgba( 0, 0, 0, 0.2 ),
+		"10dp": 4px 4px 8px 0px rgba( 0, 0, 0, 0.2 ),
 	),
 
 	/* Border radius */

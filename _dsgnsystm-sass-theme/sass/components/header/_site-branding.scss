@@ -7,20 +7,20 @@
 // Site branding
 
 .site-branding {
-	color: #{map-deep-get($config-site-branding, "color", "text")};
+	color: #{map-deep-get($config-header, "branding", "color", "text")};
 }
 
 // Site title
 
 .site-title {
 
-	color: #{map-deep-get($config-site-branding, "color", "link")};
-	font-family: #{map-deep-get($config-site-branding, "title", "font", "family")};
-	font-size: #{map-deep-get($config-site-branding, "title", "font", "size")};
+	color: #{map-deep-get($config-header, "branding", "color", "link")};
+	font-family: #{map-deep-get($config-header, "branding", "title", "font", "family")};
+	font-size: #{map-deep-get($config-header, "branding", "title", "font", "size")};
 
 	a {
 		color: currentColor;
-		font-weight: #{map-deep-get($config-site-branding, "title", "font", "weight")};
+		font-weight: #{map-deep-get($config-header, "branding", "title", "font", "weight")};
 
 		&:link,
 		&:visited {
@@ -28,7 +28,7 @@
 		}
 
 		&:hover {
-			color: #{map-deep-get($config-site-branding, "color", "link-hover")};
+			color: #{map-deep-get($config-header, "branding", "color", "link-hover")};
 		}
 	}
 }
@@ -37,6 +37,6 @@
 
 .site-description {
 	color: currentColor;
-	font-family: #{map-deep-get($config-site-branding, "description", "font", "family")};
-	font-size: #{map-deep-get($config-site-branding, "description", "font", "size")};
+	font-family: #{map-deep-get($config-header, "branding", "description", "font", "family")};
+	font-size: #{map-deep-get($config-header, "branding", "description", "font", "size")};
 }

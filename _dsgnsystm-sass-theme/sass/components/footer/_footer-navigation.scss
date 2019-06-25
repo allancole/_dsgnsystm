@@ -13,7 +13,7 @@
 
 		li {
 			display: inline;
-			margin-right: var(--global-spacing-unit);
+			margin-right: #{map-deep-get($config-global, "spacing", "unit")}
 		}
 	}
 

@@ -10,12 +10,12 @@
 	}
 
 	a {
-		color: #{map-deep-get($config-site-social-nav, "color", "link")};
+		color: #{map-deep-get($config-header, "social-nav", "color", "link")};
 		display: inline-block;
-		padding: 0 #{map-deep-get($config-site-social-nav, "link-padding")};
+		padding: 0 #{map-deep-get($config-header, "social-nav", "link-padding")};
 
 		&:hover {
-			color: #{map-deep-get($config-site-social-nav, "color", "link-hover")};
+			color: #{map-deep-get($config-header, "social-nav", "color", "link-hover")};
 		}
 	}
 

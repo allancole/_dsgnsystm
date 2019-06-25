@@ -2,7 +2,7 @@
 
 .main-navigation {
 
-	color: #{map-deep-get($config-site-main-nav, "color", "text")};
+	color: #{map-deep-get($config-header, "main-nav", "color", "text")};
 
 	// Menu wrapper
 	& > div {
@@ -44,7 +44,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		list-style: none;
-		margin: 0 calc(-0.66 * #{map-deep-get($config-global, "spacing", "horizontal")} );
+		margin: 0 calc(-0.66 * #{map-deep-get($config-global, "spacing", "unit")} );
 		position: relative;
 
 		li {
@@ -86,7 +86,7 @@
 
 			@include media(mobile) {
 				background: map-deep-get($config-global, "color", "background");
-				box-shadow: map-deep-get($config-global, "elevation", "sm");
+				box-shadow: map-deep-get($config-global, "elevation", "4dp");
 				left: 0;
 				top: 100%;
 				min-width: max-content;
@@ -104,19 +104,19 @@
 
 	// Menu Link
 	a {
-		color: #{map-deep-get($config-site-main-nav, "color", "link")};
+		color: #{map-deep-get($config-header, "main-nav", "color", "link")};
 		display: block;
-		font-family: #{map-deep-get($config-site-main-nav, "font", "family")};
-		font-weight: #{map-deep-get($config-site-main-nav, "font", "weight")};
-		padding: 0 #{map-deep-get($config-site-main-nav, "link-padding")};
+		font-family: #{map-deep-get($config-header, "main-nav", "font", "family")};
+		font-weight: #{map-deep-get($config-header, "main-nav", "font", "weight")};
+		padding: 0 #{map-deep-get($config-header, "main-nav", "link-padding")};
 
 		&:link,
 		&:visited {
-			color: #{map-deep-get($config-site-main-nav, "color", "link")};
+			color: #{map-deep-get($config-header, "main-nav", "color", "link")};
 		}
 
 		&:hover {
-			color: #{map-deep-get($config-site-main-nav, "color", "link-hover")};
+			color: #{map-deep-get($config-header, "main-nav", "color", "link-hover")};
 		}
 	}
 

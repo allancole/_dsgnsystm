@@ -1,163 +1,21 @@
 .sticky {
+
 }
 
 .sticky-post {
+	color: #{map-deep-get($config-global, "color", "background")};
+	background-color: #{map-deep-get($config-global, "color", "primary")};
+	font-family: #{map-deep-get($config-global, "font", "family", "primary")};
+	font-weight: bold;
+	font-size: #{map-deep-get($config-global, "font", "size", "sm")};
+	line-height: 1;
+	padding: calc(0.5 * #{map-deep-get($config-global, "spacing", "unit")}) calc(0.66 * #{map-deep-get($config-global, "spacing", "unit")} );
 }
 
 .updated:not(.published) {
-}
 
-.page-links {
 }
 
 .entry {
 
-	.entry-header {
-
-	}
-
-	.entry-title {
-
-		font-size: #{map-deep-get($config-heading, "font", "size", "2")};
-
-		a {
-
-		}
-	}
-
-	.entry-meta,
-	.entry-footer {
-
-		color: #{map-deep-get($config-global, "color", "foreground-light")};
-		clear: both;
-		float: none;
-		font-size: #{map-deep-get($config-global, "font", "size", "sm")};
-		display: block;
-
-		> span {
-			display: inline-block;
-			margin-right: #{map-deep-get($config-global, "spacing", "unit")};
-
-			& > * {
-				display: inline-block;
-				vertical-align: middle;
-			}
-
-			&:last-child {
-				margin-right: 0;
-			}
-
-			.published + .updated {
-				display: none; // Hide updated date?
-			}
-		}
-
-		a {
-			color: currentColor;
-
-			&:hover,
-			&:active {
-				color: #{map-deep-get($config-global, "color", "primary-hover")};
-			}
-		}
-
-		.svg-icon {
-			fill: currentColor;
-			position: relative;
-			display: inline-block;
-			vertical-align: middle;
-			margin-right: calc(0.25 * #{map-deep-get($config-global, "spacing", "unit")});
-		}
-	}
-
-	.entry-meta {
-
-	}
-
-	.entry-footer {
-
-	}
-
-	.post-thumbnail {
-		text-align: center;
-
-		.post-thumbnail-inner {
-			display: block;
-		}
-	}
-
-	.entry-content,
-	.entry-summary {
-
-	}
-
-	.entry-content {
-
-		p {
-			word-wrap: break-word;
-		}
-
-		.more-link {
-			display: inline;
-			color: inherit;
-
-			&:after {
-				content: "\02192";
-				display: inline-block;
-				margin-left: 0.5em;
-			}
-
-			&:hover {
-				text-decoration: none;
-			}
-		}
-
-		a {
-
-		}
-
-		// Overwrite iframe embeds that have inline styles.
-		> iframe[style] {
-
-			margin: var(--global--vertical-spacing-unit) 0 !important;
-			max-width: 100% !important;
-
-			@include media(mobile) {
-				max-width: var(--global--width-content) !important;
-			}
-		}
-
-		// Page links
-		.page-links a {
-
-		}
-
-		// Classic editor audio embeds.
-		.wp-audio-shortcode {
-
-			@include media(mobile) {
-				max-width: var(--global--width-content) !important;
-			}
-		}
-	}
-}
-
-/* Author description */
-
-.author-bio {
-
-	.site-main > article > & {
-		margin-top: calc(2 * var(--global--vertical-spacing-unit));
-	}
-
-	.author-title {
-		font-size: var(--heading--font-size-3);
-	}
-
-	.author-description {
-
-		.author-link {
-
-		}
-	}
 }

@@ -7,8 +7,8 @@
  * - Mixins, variables and functions
  */
 @import "sass/abstracts/functions";
-@import "sass/abstracts/global-variables";
-@import "sass/abstracts/block-variables";
+@import "sass/abstracts/config-global";
+@import "sass/abstracts/config-blocks";
 @import "sass/abstracts/mixins";
 
 /**
