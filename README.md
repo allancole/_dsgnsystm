@@ -11,6 +11,9 @@ At it’s simplest, this tool connects Typographic, Color, and Spacing decsions 
 4. Next, install the `_dsgnsystm-childtheme-elegant-business` and activate it. Watch how the design changes and then take a look at the `style.css` file to see how little code is necessary to achieve a unique design. 
 5. If you’re feeling really experimental, make a copy of the one the child themes and try to roll out your own original theme design by only changing the available CSS-variables.
 
+### Sass version
+Attempts to express the system using Sass variables and variable maps. 
+
 ### Future thinking
 - Make a plugin version of this system
 - Add the CSS-variables to Gutenberg itself
