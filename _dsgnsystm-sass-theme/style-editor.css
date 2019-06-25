@@ -89,6 +89,10 @@ a {
  * Elements
  * - Styles for basic HTML elemants
  */
+blockquote {
+  padding-left: 1rem;
+}
+
 blockquote p {
   font-size: 1.25rem;
   letter-spacing: 0;
@@ -112,6 +116,10 @@ blockquote > *:first-child {
 
 blockquote > *:last-child {
   margin-bottom: 0;
+}
+
+blockquote.alignleft, blockquote.alignright {
+  padding-left: inherit;
 }
 
 blockquote.alignleft p, blockquote.alignright p {

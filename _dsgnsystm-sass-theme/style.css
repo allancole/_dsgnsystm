@@ -865,6 +865,10 @@ a {
  * Elements
  * - Styles for basic HTML elemants
  */
+blockquote {
+  padding-left: 1rem;
+}
+
 blockquote p {
   font-size: 1.25rem;
   letter-spacing: 0;
@@ -888,6 +892,10 @@ blockquote > *:first-child {
 
 blockquote > *:last-child {
   margin-bottom: 0;
+}
+
+blockquote.alignleft, blockquote.alignright {
+  padding-left: inherit;
 }
 
 blockquote.alignleft p, blockquote.alignright p {
@@ -1786,7 +1794,7 @@ table th,
   align-content: center;
   display: flex;
   list-style: none;
-  margin: 0 calc(-0.66 * 1rem);
+  margin: 0 calc(-0.5 * 18px);
 }
 
 .social-navigation a {
