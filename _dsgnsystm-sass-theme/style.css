@@ -172,7 +172,7 @@ hr {
  */
 pre {
   font-family: monospace, monospace;
-  font-size: 1.125rem;
+  font-size: 1rem;
   /* 1 */
   overflow: scroll;
 }
@@ -226,7 +226,7 @@ code,
 kbd,
 samp {
   font-family: monospace, monospace;
-  font-size: 1.125rem;
+  font-size: 1rem;
   /* 1 */
 }
 
@@ -250,12 +250,13 @@ mark {
  */
 figcaption,
 small {
-  font-size: 0.66rem;
-  letter-spacing: 0.0625em;
+  font-size: 0.75rem;
+  letter-spacing: 0.0125em;
+  line-height: 1.125em;
 }
 
 big {
-  font-size: 3.375rem;
+  font-size: 2.75rem;
   letter-spacing: -0.025em;
 }
 
@@ -265,7 +266,7 @@ big {
  */
 sub,
 sup {
-  font-size: 0.66rem;
+  font-size: 0.75rem;
   line-height: 0;
   position: relative;
   vertical-align: baseline;
@@ -602,13 +603,13 @@ th {
 }
 
 html {
-  font-size: 20px;
+  font-size: 22px;
   font-family: serif;
   line-height: 1.75em;
 }
 
 body {
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: normal;
   color: #111111;
   text-align: left;
@@ -651,7 +652,7 @@ a {
   clip-path: none;
   color: #111111;
   display: block;
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: bold;
   height: auto;
   left: 5px;
@@ -865,7 +866,7 @@ a {
  * - Styles for basic HTML elemants
  */
 blockquote p {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   letter-spacing: 0;
   line-height: 1.125em;
 }
@@ -873,7 +874,7 @@ blockquote p {
 blockquote cite,
 blockquote footer {
   font-size: 0.875rem;
-  letter-spacing: 0;
+  letter-spacing: 0.025em;
 }
 
 blockquote > * {
@@ -890,7 +891,7 @@ blockquote > *:last-child {
 }
 
 blockquote.alignleft p, blockquote.alignright p {
-  font-size: 1.125rem;
+  font-size: 1rem;
   max-width: inherit;
   width: inherit;
 }
@@ -898,8 +899,8 @@ blockquote.alignleft p, blockquote.alignright p {
 blockquote.alignleft cite,
 blockquote.alignleft footer, blockquote.alignright cite,
 blockquote.alignright footer {
-  font-size: 0.66rem;
-  letter-spacing: 0.0625em;
+  font-size: 0.75rem;
+  letter-spacing: 0.0125em;
 }
 
 input[type="text"],
@@ -953,10 +954,10 @@ textarea {
 
 figcaption {
   color: #767676;
-  font-size: 0.66rem;
+  font-size: 0.75rem;
   line-height: 1.75em;
-  margin-top: calc(0.5 * 32px);
-  margin-bottom: 32px;
+  margin-top: calc(0.5 * 18px);
+  margin-bottom: 18px;
   text-align: center;
 }
 
@@ -1012,7 +1013,7 @@ input[type="submit"],
   cursor: pointer;
   font-weight: bold;
   font-family: sans-serif;
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: 1;
   background-color: blue;
   border-radius: calc(0.5 * 1rem);
@@ -1187,44 +1188,44 @@ h6, .h6 {
 }
 
 h1, .h1 {
-  font-size: 3.375rem;
+  font-size: 2.75rem;
   letter-spacing: -0.025em;
   line-height: 1.125em;
 }
 
 h2, .h2 {
-  font-size: 2.625rem;
+  font-size: 2rem;
   letter-spacing: -0.0125em;
   line-height: 1.125em;
 }
 
 h3, .h3 {
-  font-size: 2rem;
-  letter-spacing: 0;
-  line-height: 1.125em;
-}
-
-h4, .h4 {
   font-size: 1.5rem;
   letter-spacing: 0;
   line-height: 1.125em;
 }
 
+h4, .h4 {
+  font-size: 1.25rem;
+  letter-spacing: 0;
+  line-height: 1.125em;
+}
+
 h5, .h5 {
-  font-size: 1.125rem;
+  font-size: 1rem;
   letter-spacing: 0;
   line-height: 1.75em;
 }
 
 h6, .h6 {
-  font-size: 20px;
+  font-size: 22px;
   letter-spacing: 0;
   line-height: 1;
 }
 
 .wp-block-image figcaption {
   color: #767676;
-  font-size: 0.66rem;
+  font-size: 0.75rem;
   line-height: 1.75em;
   margin-top: calc(0.5 * 18px);
   margin-bottom: 18px;
@@ -1271,6 +1272,10 @@ h6, .h6 {
   text-align: center;
   vertical-align: top;
   width: 100%;
+}
+
+.gallery-item a {
+  display: block;
 }
 
 .gallery-columns-2 .gallery-item {
@@ -1384,7 +1389,7 @@ dd {
 }
 
 .wp-block-pullquote p {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   letter-spacing: 0;
   line-height: 1.125em;
 }
@@ -1394,7 +1399,7 @@ dd {
 .wp-block-pullquote footer {
   color: #767676;
   font-size: 0.875rem;
-  letter-spacing: 0;
+  letter-spacing: 0.025em;
 }
 
 .wp-block-pullquote:not(.is-style-solid-color) {
@@ -1432,7 +1437,7 @@ dd {
 }
 
 .wp-block-quote p {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   letter-spacing: 0;
 }
 
@@ -1441,7 +1446,7 @@ dd {
 .wp-block-quote footer {
   color: #767676;
   font-size: 0.875rem;
-  letter-spacing: 0;
+  letter-spacing: 0.025em;
 }
 
 .wp-block-quote[style*="text-align:right"], .wp-block-quote[style*="text-align: right"] {
@@ -1455,7 +1460,7 @@ dd {
 }
 
 .wp-block-quote.is-style-large p, .wp-block-quote.is-large p {
-  font-size: 2rem;
+  font-size: 1.5rem;
   letter-spacing: 0;
   line-height: 1.125em;
 }
@@ -1477,7 +1482,7 @@ hr.is-style-wide {
 .wp-block-separator.is-style-dots:before,
 hr.is-style-dots:before {
   color: #DDDDDD;
-  font-size: 2rem;
+  font-size: 1.5rem;
   letter-spacing: 0.875rem;
   padding-left: 0.875rem;
 }
@@ -1511,7 +1516,7 @@ table th,
 
 .wp-block-video figcaption {
   color: #767676;
-  font-size: 0.66rem;
+  font-size: 0.75rem;
   margin-top: calc(0.5 * 18px);
   margin-bottom: 18px;
   text-align: center;
@@ -1567,25 +1572,25 @@ table th,
 .has-regular-font-size,
 .has-normal-font-size,
 .has-medium-font-size {
-  font-size: 1.125rem;
+  font-size: 1rem;
 }
 
 .is-large-text,
 .has-large-font-size {
-  font-size: 2rem;
+  font-size: 1.5rem;
   line-height: 1.125em;
 }
 
 .is-larger-text,
 .has-larger-font-size,
 .has-huge-font-size {
-  font-size: 3.375rem;
+  font-size: 2.75rem;
   line-height: 1.125em;
 }
 
 .has-drop-cap:not(:focus)::first-letter {
   font-family: sans-serif;
-  font-size: calc(2 * 3.375rem);
+  font-size: calc(2 * 2.75rem);
   font-weight: bold;
   line-height: 0.66;
   text-transform: uppercase;
@@ -1626,7 +1631,7 @@ table th,
 .site-title {
   color: blue;
   font-family: sans-serif;
-  font-size: 1.125rem;
+  font-size: 1rem;
 }
 
 .site-title a {
@@ -1773,7 +1778,7 @@ table th,
 @media only screen and (min-width: 600px) {
   .main-navigation > div > ul > .menu-item-has-children > a::after {
     content: "\00a0\25BC";
-    font-size: 0.66rem;
+    font-size: 0.75rem;
   }
 }
 
@@ -1838,6 +1843,10 @@ table th,
 .footer-navigation .footer-menu li {
   display: inline;
   margin-right: 18px;
+}
+
+.entry-title {
+  font-size: 2rem;
 }
 
 .entry-meta,
@@ -1944,7 +1953,7 @@ table th,
 }
 
 .author-bio .author-title {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 /* Next/Previous navigation */
@@ -1954,7 +1963,7 @@ table th,
 
 .post-navigation .post-title {
   font-family: sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 600;
 }
 
@@ -1981,7 +1990,7 @@ table th,
 
 .pagination .nav-links > * {
   font-family: sans-serif;
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 600;
   padding-left: calc(0.66 * 18px);
   padding-right: calc(0.66 * 18px);
@@ -1999,9 +2008,10 @@ table th,
   }
   .nav-links .nav-next,
   .nav-links .nav-previous {
-    flex: 0 1 calc(50% - (0.5 * 18px));
+    flex: 0 1 auto;
     margin-bottom: inherit;
     margin-top: inherit;
+    max-width: calc(50% - (0.5 * 18px));
   }
   .nav-links .nav-next {
     text-align: right;
@@ -2028,19 +2038,19 @@ table th,
  * Comment Title
  */
 .comments-title {
-  font-size: 2rem;
+  font-size: 1.5rem;
   letter-spacing: 0;
 }
 
 .comment-reply-title {
-  font-size: 1.125rem;
+  font-size: 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .comment-reply-title small {
-  font-size: 20px;
+  font-size: 22px;
   font-family: serif;
   letter-spacing: normal;
   line-height: 1.125em;
@@ -2067,7 +2077,7 @@ table th,
 }
 
 .children > li {
-  border-top: 1px solid var(--global--color-border);
+  border-top: 1px solid #DDDDDD;
   margin-top: 32px;
   margin-bottom: 32px;
 }
@@ -2135,7 +2145,7 @@ table th,
 
 .comment-metadata,
 .reply {
-  font-size: 0.66rem;
+  font-size: 0.75rem;
   line-height: 1.125em;
 }
 
@@ -2191,9 +2201,13 @@ table th,
 /**
  * Comment Form
  */
+.comment-respond {
+  margin-top: calc(2 * 32px);
+}
+
 .comment-respond > * {
-  margin-top: 32px;
-  margin-bottom: 32px;
+  margin-top: 18px;
+  margin-bottom: 18px;
 }
 
 .comment-respond > *:first-child {
@@ -2205,8 +2219,8 @@ table th,
 }
 
 .comment-form > p {
-  margin-top: 32px;
-  margin-bottom: 32px;
+  margin-top: 18px;
+  margin-bottom: 18px;
 }
 
 .comment-form > p:first-child {
@@ -2247,6 +2261,8 @@ table th,
  * Comment Nav
  */
 .comment-navigation a {
+  font-family: sans-serif;
+  font-size: 1rem;
   font-weight: 600;
 }
 
@@ -2269,7 +2285,7 @@ table th,
 }
 
 .page-title {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 /**

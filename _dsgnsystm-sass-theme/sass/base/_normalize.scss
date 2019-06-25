@@ -170,7 +170,7 @@ figcaption,
 small {
   font-size: #{map-deep-get($config-global, "font", "size", "xs")};
   letter-spacing: #{map-deep-get($config-global, "font", "letter-spacing", "xs")};
-  line-height: #{map-deep-get($config-heading, "font", "line-height", "heading")};
+  line-height: #{map-deep-get($config-global, "font", "line-height", "heading")};
 }
 
 big{

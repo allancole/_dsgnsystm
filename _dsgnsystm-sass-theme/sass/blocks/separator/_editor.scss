@@ -1,19 +1,14 @@
-:root {
-	--separator--height: 2px;
-	--separator--vertical-spacing-unit: calc(2 * var(--global--vertical-spacing-unit));
-}
-
 .wp-block-separator,
 hr {
-    border-bottom: var(--separator--height) solid var(--global--color-border);
+    border-bottom: #{map-deep-get($config-separator, "height")} solid #{map-deep-get($config-global, "color", "border")};
 
 	&[style*="text-align:right"],
 	&[style*="text-align: right"] {
-		border-right-color: var(--quote--border-color);
+		border-right-color: #{map-deep-get($config-global, "color", "border")};
 	}
 
 	&.is-style-wide {
-		border-bottom-width: var(--separator--height);
+		border-bottom-width: #{map-deep-get($config-separator, "height")};
 	}
 
 	&.is-style-dots {
@@ -21,7 +16,7 @@ hr {
 		border-bottom: none;
 
 		&:before {
-			color: var(--global--color-border);
+			color: #{map-deep-get($config-global, "color", "border")};
 		}
 	}
 }

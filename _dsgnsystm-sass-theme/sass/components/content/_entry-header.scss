@@ -4,7 +4,7 @@
 
 .entry-title {
 
-	font-size: #{map-deep-get($config-heading, "font", "size", "2")};
+	font-size: #{map-deep-get($config-heading, "font", "size", "h2")};
 
 	a {
 

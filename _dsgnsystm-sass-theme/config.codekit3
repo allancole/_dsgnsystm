@@ -2432,14 +2432,6 @@
 		"oA": 0,
 		"oAP": "/template-parts/post/author-bio.php",
 		"oF": 0
-		},
-	"/template-parts/post/discussion-meta.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/template-parts/post/discussion-meta.php",
-		"oF": 0
 		}
 	},
 "hooks": [

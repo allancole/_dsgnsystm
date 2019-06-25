@@ -55,17 +55,13 @@
  * Base
  * - Reset the browser
  */
-html {
-  font-size: 20px;
-  font-family: serif;
-  line-height: 1.75em;
-}
-
 body {
-  font-size: 1.125rem;
-  font-weight: normal;
   color: #111111;
   background-color: white;
+  font-family: serif;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.75em;
 }
 
 p {
@@ -94,7 +90,7 @@ a {
  * - Styles for basic HTML elemants
  */
 blockquote p {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   letter-spacing: 0;
   line-height: 1.125em;
 }
@@ -102,7 +98,7 @@ blockquote p {
 blockquote cite,
 blockquote footer {
   font-size: 0.875rem;
-  letter-spacing: 0;
+  letter-spacing: 0.025em;
 }
 
 blockquote > * {
@@ -119,7 +115,7 @@ blockquote > *:last-child {
 }
 
 blockquote.alignleft p, blockquote.alignright p {
-  font-size: 1.125rem;
+  font-size: 1rem;
   max-width: inherit;
   width: inherit;
 }
@@ -127,16 +123,16 @@ blockquote.alignleft p, blockquote.alignright p {
 blockquote.alignleft cite,
 blockquote.alignleft footer, blockquote.alignright cite,
 blockquote.alignright footer {
-  font-size: 0.66rem;
-  letter-spacing: 0.0625em;
+  font-size: 0.75rem;
+  letter-spacing: 0.0125em;
 }
 
 figcaption {
   color: #767676;
-  font-size: 0.66rem;
+  font-size: 0.75rem;
   line-height: 1.75em;
-  margin-top: calc(0.5 * 32px);
-  margin-bottom: 32px;
+  margin-top: calc(0.5 * 18px);
+  margin-bottom: 18px;
   text-align: center;
 }
 
@@ -192,7 +188,7 @@ object {
   color: white;
   font-weight: bold;
   font-family: sans-serif;
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: 1;
   background-color: blue;
   border-radius: calc(0.5 * 1rem);
@@ -229,53 +225,52 @@ h6, .h6 {
 }
 
 h1, .h1 {
-  font-size: 3.375rem;
+  font-size: 2.75rem;
   letter-spacing: -0.025em;
 }
 
 h2, .h2 {
-  font-size: 2.625rem;
+  font-size: 2rem;
   letter-spacing: -0.0125em;
 }
 
 h3, .h3 {
-  font-size: 2rem;
-  letter-spacing: 0;
-}
-
-h4, .h4 {
   font-size: 1.5rem;
   letter-spacing: 0;
 }
 
+h4, .h4 {
+  font-size: 1.25rem;
+  letter-spacing: 0;
+}
+
 h5, .h5 {
-  font-size: 1.125rem;
+  font-size: 1rem;
   letter-spacing: 0;
 }
 
 h6, .h6 {
-  font-size: 20px;
+  font-size: 22px;
   letter-spacing: 0;
+}
+
+.wp-block-gallery figcaption {
+  margin-bottom: 0;
 }
 
 :root {
   --pullquote--width-border: 4px;
 }
 
-:root {
-  --quote--border-color: var(--global--color-primary);
-}
-
 .wp-block-quote {
-  border-left: 4px solid var(--quote--border-color);
-  margin: var(--global--vertical-spacing-unit) 0;
+  border-left-color: blue;
+  margin: 32px 0;
   padding-left: 1rem;
 }
 
 .wp-block-quote p {
-  font-size: var(--heading--font-size-4);
-  letter-spacing: var(--heading--letter-spacing-4);
-  line-height: var(--global--font-line-height);
+  font-size: 1.25rem;
+  letter-spacing: 0;
 }
 
 .wp-block-quote.is-large, .wp-block-quote.is-style-large {
@@ -284,30 +279,25 @@ h6, .h6 {
 }
 
 .wp-block-quote.is-large p, .wp-block-quote.is-style-large p {
-  font-size: var(--heading--font-size-3);
-  letter-spacing: var(--heading--letter-spacing-3);
-  line-height: var(--heading--line-height);
-}
-
-:root {
-  --separator--height: 2px;
-  --separator--vertical-spacing-unit: calc(2 * var(--global--vertical-spacing-unit));
+  font-size: 1.5rem;
+  letter-spacing: 0;
+  line-height: 1.125em;
 }
 
 .wp-block-separator,
 hr {
-  border-bottom: var(--separator--height) solid var(--global--color-border);
+  border-bottom: 2px solid #DDDDDD;
 }
 
 .wp-block-separator[style*="text-align:right"], .wp-block-separator[style*="text-align: right"],
 hr[style*="text-align:right"],
 hr[style*="text-align: right"] {
-  border-right-color: var(--quote--border-color);
+  border-right-color: #DDDDDD;
 }
 
 .wp-block-separator.is-style-wide,
 hr.is-style-wide {
-  border-bottom-width: var(--separator--height);
+  border-bottom-width: 2px;
 }
 
 .wp-block-separator.is-style-dots,
@@ -317,7 +307,7 @@ hr.is-style-dots {
 
 .wp-block-separator.is-style-dots:before,
 hr.is-style-dots:before {
-  color: var(--global--color-border);
+  color: #DDDDDD;
 }
 
 table th,
@@ -337,43 +327,43 @@ table th,
  * - Needs a special styles
  */
 .editor-post-title__block .editor-post-title__input {
-  color: var(--global--color-foreground);
-  font-family: var(--heading--font-family);
-  font-weight: var(--heading--font-weight);
-  font-size: var(--heading--font-size-2);
-  letter-spacing: var(--heading--letter-spacing-1);
-  line-height: var(--heading--line-height);
+  color: #111111;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+  letter-spacing: -0.0125em;
+  line-height: 1.125em;
 }
 
 .is-small-text,
 .has-small-font-size {
-  font-size: var(--global--font-size-sm);
+  font-size: 0.875rem;
 }
 
 .is-regular-text,
 .has-regular-font-size,
 .has-normal-font-size,
 .has-medium-font-size {
-  font-size: var(--global--font-size-md);
+  font-size: 1rem;
 }
 
 .is-large-text,
 .has-large-font-size {
-  font-size: var(--heading--font-size-3);
-  line-height: var(--heading--line-height);
+  font-size: 1.5rem;
+  line-height: 1.125em;
 }
 
 .is-larger-text,
 .has-larger-font-size,
 .has-huge-font-size {
-  font-size: var(--heading--font-size-1);
-  line-height: var(--heading--line-height);
+  font-size: 2.75rem;
+  line-height: 1.125em;
 }
 
 .has-drop-cap:not(:focus)::first-letter {
-  font-family: var(--heading--font-family);
-  font-size: calc(2 * var(--heading--font-size-1));
-  font-weight: var(--heading--font-weight);
+  font-family: sans-serif;
+  font-size: calc(2 * 2.75rem);
+  font-weight: bold;
 }
 
 /*

@@ -27,7 +27,7 @@
 }
 
 .comment-reply-title {
-	font-size: #{map-deep-get($config-global, "font", "size", "md")};
+	font-size: #{map-deep-get($config-global, "font", "size", "xl")};
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -61,7 +61,7 @@
 	margin-left: #{map-deep-get($config-global, "spacing", "horizontal")};
 
 	> li {
-		border-top: 1px solid var(--global--color-border);
+		border-top: 1px solid #{map-deep-get($config-global, "color", "border")};
 		margin-top: #{map-deep-get($config-global, "spacing", "vertical")};
 		margin-bottom: #{map-deep-get($config-global, "spacing", "vertical")};
 	}

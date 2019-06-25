@@ -6,9 +6,10 @@
  * Abstracts
  * - Mixins, variables and functions
  */
-@import "sass/abstracts/global-variables";
+@import "sass/abstracts/functions";
+@import "sass/abstracts/config-global";
+@import "sass/abstracts/mixins";
 
-:root {
-	/* global variables */
-	@include global-variables;
+html {
+	font-size: #{map-deep-get($config-global, "font", "size", "base")};
 }

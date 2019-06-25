@@ -1,14 +1,10 @@
-html {
-	font-size: #{map-deep-get($config-global, "font", "size", "base")};
-	font-family: #{map-deep-get($config-global, "font", "family", "secondary")};
-	line-height: #{map-deep-get($config-global, "font", "line-height", "body")};
-}
-
 body {
-	font-size: #{map-deep-get($config-global, "font", "size", "md")};
-	font-weight: normal;
 	color: #{map-deep-get($config-global, "color", "foreground")};
 	background-color: #{map-deep-get($config-global, "color", "background")};
+	font-family: #{map-deep-get($config-global, "font", "family", "secondary")};
+	font-size: #{map-deep-get($config-global, "font", "size", "md")};
+	font-weight: normal;
+	line-height: #{map-deep-get($config-global, "font", "line-height", "body")};
 }
 
 p {
@@ -16,7 +12,6 @@ p {
 }
 
 // Links styles
-
 a {
 	color: #{map-deep-get($config-global, "color", "primary")};
 

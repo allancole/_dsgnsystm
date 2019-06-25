@@ -58,9 +58,10 @@
 
 		.nav-next,
 		.nav-previous {
-			flex: 0 1 calc(50% - (0.5 * #{map-deep-get($config-global, "spacing", "unit")}));
+			flex: 0 1 auto;
 			margin-bottom: inherit;
 			margin-top: inherit;
+			max-width: calc(50% - (0.5 * #{map-deep-get($config-global, "spacing", "unit")}));
 		}
 
 		.nav-next {

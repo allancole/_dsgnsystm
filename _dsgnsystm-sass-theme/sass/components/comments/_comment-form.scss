@@ -1,6 +1,10 @@
+.comment-respond {
+	margin-top: calc(2 * #{map-deep-get($config-global, "spacing", "vertical")});
+}
+
 .comment-respond > * {
-	margin-top: #{map-deep-get($config-global, "spacing", "vertical")};
-	margin-bottom: #{map-deep-get($config-global, "spacing", "vertical")};
+	margin-top: #{map-deep-get($config-global, "spacing", "unit")};
+	margin-bottom: #{map-deep-get($config-global, "spacing", "unit")};
 
 	&:first-child {
 		margin-top: 0;
@@ -12,8 +16,8 @@
 }
 
 .comment-form > p {
-	margin-top: #{map-deep-get($config-global, "spacing", "vertical")};
-	margin-bottom: #{map-deep-get($config-global, "spacing", "vertical")};
+	margin-top: #{map-deep-get($config-global, "spacing", "unit")};
+	margin-bottom: #{map-deep-get($config-global, "spacing", "unit")};
 
 	&:first-child {
 		margin-top: 0;

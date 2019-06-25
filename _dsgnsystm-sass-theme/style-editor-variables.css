@@ -5,5 +5,30 @@
  * Abstracts
  * - Mixins, variables and functions
  */
-:root {
-  /* global variables */ }
+/* Sass Functions go here */
+/**
+ * Map deep get
+ * @author Hugo Giraudel
+ * @access public
+ * @param {Map} $map - Map
+ * @param {Arglist} $keys - Key chain
+ * @return {*} - Desired value
+ *
+ * Example:
+ * $m-breakpoint: map-deep-get($__prefix-default-config, "layouts", "M");
+ */
+/**
+ * Deep set function to set a value in nested maps
+ * @author Hugo Giraudel
+ * @access public
+ * @param {Map} $map - Map
+ * @param {List} $keys -  Key chaine
+ * @param {*} $value - Value to assign
+ * @return {Map}
+ *
+ * Example:
+ * $__prefix-default-config: map-deep-set($__prefix-default-config, "layouts" "M", 650px);
+ */
+/* Collect Root Variables??? */
+html {
+  font-size: 22px; }

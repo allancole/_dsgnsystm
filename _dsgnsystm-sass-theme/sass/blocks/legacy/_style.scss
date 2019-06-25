@@ -8,6 +8,10 @@
 	vertical-align: top;
 	width: 100%;
 
+	a {
+		display: block;
+	}
+
 	.gallery-columns-2 & {
 		max-width: 50%;
 	}
