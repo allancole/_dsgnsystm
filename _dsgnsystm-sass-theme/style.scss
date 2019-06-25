@@ -67,6 +67,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import "sass/pages/imports";
 
 /**
+ * Responsive Logic
+ * - Loading this last to respect cascaing rules
+ */
+@import "sass/abstracts/responsive-logic";
+
+/**
  * Vendors
  * - Styles for 3rd party plugins and WP extensions
  */

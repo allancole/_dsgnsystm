@@ -1,19 +1,8 @@
-:root {
-	--site-main-nav--font-family: var(--global--font-primary);
-	--site-main-nav--font-weight: bold;
-
-	--site-main-nav--color-link: var(--global--color-primary);
-	--site-main-nav--color-link-hover: var(--global--color-primary-hover);
-	--site-main-nav--color-text: var(--global--color-foreground);
-
-	--site-main-nav--padding: calc(0.66 * #{map-deep-get($config-global, "spacing", "unit")} );
-}
-
 // Navigation
 
 .main-navigation {
 
-	color: var(--site-main-nav--text-color);
+	color: #{map-deep-get($config-site-main-nav, "color", "text")};
 
 	// Menu wrapper
 	& > div {
@@ -96,8 +85,8 @@
 			position: relative;
 
 			@include media(mobile) {
-				background: var(--global--color-background);
-				box-shadow: var(--global--elevation-2);
+				background: map-deep-get($config-global, "color", "background");
+				box-shadow: map-deep-get($config-global, "elevation", "sm");
 				left: 0;
 				top: 100%;
 				min-width: max-content;
@@ -115,19 +104,19 @@
 
 	// Menu Link
 	a {
-		color: var(--site-main-nav--color-link);
+		color: #{map-deep-get($config-site-main-nav, "color", "link")};
 		display: block;
-		font-family: var(--site-main-nav--font-family);
-		font-weight: var(--site-main-nav--font-weight);
-		padding: 0 var(--site-main-nav--padding);
+		font-family: #{map-deep-get($config-site-main-nav, "font", "family")};
+		font-weight: #{map-deep-get($config-site-main-nav, "font", "weight")};
+		padding: 0 #{map-deep-get($config-site-main-nav, "link-padding")};
 
 		&:link,
 		&:visited {
-			color: var(--site-main-nav--color-link);
+			color: #{map-deep-get($config-site-main-nav, "color", "link")};
 		}
 
 		&:hover {
-			color: var(--site-main-nav--color-link-hover);
+			color: #{map-deep-get($config-site-main-nav, "color", "link-hover")};
 		}
 	}
 
@@ -152,7 +141,7 @@
 		& > div > ul > .menu-item-has-children > a {
 			&::after {
 				content: "\00a0\25BC";
-				font-size: var(--global--font-size-xs);
+				font-size: map-deep-get($config-global, "font", "size", "xs");
 			}
 		}
 	}

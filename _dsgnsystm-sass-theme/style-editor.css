@@ -170,7 +170,7 @@ object {
   line-height: 1;
   background-color: blue;
   border-radius: calc(0.5 * 1rem);
-  padding: calc( 0.75 * 1rem) 1rem;
+  padding: calc( 0.75 * 18px) 18px;
 }
 
 .wp-block-button .wp-block-button__link:hover, .wp-block-button .wp-block-button__link:focus, .wp-block-button .wp-block-button__link.has-focus {
@@ -303,7 +303,7 @@ table td,
 table th,
 .wp-block-table td,
 .wp-block-table th {
-  padding: calc( 0.5 * 1rem);
+  padding: calc( 0.5 * 18px);
 }
 
 /**

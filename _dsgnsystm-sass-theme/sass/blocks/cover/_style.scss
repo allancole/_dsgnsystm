@@ -3,8 +3,7 @@
 
 	background-color: #{map-deep-get($config-global, "color", "foreground")};
 	min-height: #{map-deep-get($config-cover, "height")};
-	margin-top: inherit;
-	margin-bottom: inherit;
+	margin: inherit;
 
 	.wp-block-cover__inner-container,
 	.wp-block-cover-image-text,
@@ -48,7 +47,7 @@
 		.wp-block-cover__inner-container,
 		.wp-block-cover-image-text,
 		.wp-block-cover-text {
-			max-width: calc( var(--global--width-content) - calc( var(--global--width-content) / 12 ) );
+			@extend %responsive-align-container;
 		}
 	}
 }

@@ -2,6 +2,8 @@
 	// empty for now
 }
 
+$baseline-unit: 8px;
+
 $config-global: (
 
 	/* Fonts */
@@ -66,9 +68,9 @@ $config-global: (
 
 	/* Spacing */
 	"spacing": (
-		"unit": 1rem,
+		"unit": #{2.25 * $baseline-unit},
 		"horizontal": 1rem,
-		"vertical": 32px, /* 32px matches default spacing in the editor. */
+		"vertical": #{4 * $baseline-unit}, /* 32px matches default spacing in the editor. */
 	),
 
 	/* Breakpoints */

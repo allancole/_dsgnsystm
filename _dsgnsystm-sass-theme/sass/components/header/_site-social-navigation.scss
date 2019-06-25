@@ -1,12 +1,6 @@
-:root {
-	--site-social-nav--color-link: var(--global--color-foreground);
-	--site-social-nav--color-link-hover: var(--global--color-primary-hover);
-	--site-social-nav--padding: calc( 0.5 * var(--site-main-nav--padding) );
-}
-
 .social-navigation {
 
-	margin-top: calc(-1.5 * #{map-deep-get($config-global, "spacing", "vertical")});
+// 	margin-top: calc(-1.5 * #{map-deep-get($config-global, "spacing", "vertical")});
 
 	& > div > ul {
 		align-content: center;
@@ -16,12 +10,12 @@
 	}
 
 	a {
-		color: var(--site-social-nav--color-link);
+		color: #{map-deep-get($config-site-social-nav, "color", "link")};
 		display: inline-block;
-		padding: 0 var(--site-social-nav--padding);
+		padding: 0 #{map-deep-get($config-site-social-nav, "link-padding")};
 
 		&:hover {
-			color: var(--site-social-nav--color-link-hover);
+			color: #{map-deep-get($config-site-social-nav, "color", "link-hover")};
 		}
 	}
 

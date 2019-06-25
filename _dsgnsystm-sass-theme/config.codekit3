@@ -857,6 +857,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"/sass/abstracts/_component-variables.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/sass/abstracts/_component-variables.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"/sass/abstracts/_functions.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -1880,6 +1893,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/sass/components/header/_site-social-navigation.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/sass/components/header/_variables.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/sass/components/header/_variables.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
