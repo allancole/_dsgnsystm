@@ -1,5 +1,5 @@
 body {
-	color: #{map-deep-get($config-global, "color", "foreground")};
+	color: #{map-deep-get($config-global, "color", "foreground", "default")};
 	background-color: #{map-deep-get($config-global, "color", "background")};
 	font-family: #{map-deep-get($config-global, "font", "family", "secondary")};
 	font-size: #{map-deep-get($config-global, "font", "size", "md")};
@@ -13,10 +13,10 @@ p {
 
 // Links styles
 a {
-	color: #{map-deep-get($config-global, "color", "primary")};
+	color: #{map-deep-get($config-global, "color", "primary", "default")};
 
 	&:hover {
-		color: #{map-deep-get($config-global, "color", "primary-hover")};
+		color: #{map-deep-get($config-global, "color", "primary", "hover")};
 	}
 }
 

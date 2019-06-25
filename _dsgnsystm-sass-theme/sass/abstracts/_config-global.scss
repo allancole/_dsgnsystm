@@ -41,7 +41,7 @@ $config-global: (
 		),
 		/* Line Height */
 		"line-height": (
-			"base": 1,
+			"base": 1rem,
 			"body": 1.75em,
 			"heading": 1.125em,
 			"xs": 1.75em,
@@ -56,18 +56,24 @@ $config-global: (
 
 	/* Colors */
 	"color": (
-		"primary": blue,
-		"primary-hover": indigo,
-		"secondary": red,
-		"secondary-hover": darkred,
-		"black": black,
-		"white": white,
-		"foreground": #111111,
-		"foreground-light": #767676, // must be accesible!
-		"foreground-dark": #444444, // must be accesible!
+		"primary": (
+			"default": blue,
+			"hover": indigo,
+		),
+		"secondary": (
+			"default": red,
+			"hover": darkred,
+		),
+		"foreground": (
+			"default": #111111,
+			"light": #767676, // must be accesible!
+			"dark": #444444, // must be accesible!
+		),
 		"background": white,
 		"border": #DDDDDD,
 		"text-selection": lightblue,
+		"black": black,
+		"white": white,
 	),
 
 	/* Spacing */

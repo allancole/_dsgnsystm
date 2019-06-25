@@ -26,7 +26,7 @@
 	.wp-block-quote__citation,
 	cite,
 	footer {
-		color: #{map-deep-get($config-global, "color", "foreground-light")};
+		color: #{map-deep-get($config-global, "color", "foreground", "light")};
 		font-size: #{map-deep-get($config-global, "font", "size", "sm")};
 		letter-spacing: #{map-deep-get($config-global, "font", "letter-spacing", "sm")};
 	}

@@ -9,8 +9,3 @@
 @import "config-components";
 @import "config-elements";
 @import "mixins";
-
-:root {
-	/* global variables */
-	@include global-variables;
-}

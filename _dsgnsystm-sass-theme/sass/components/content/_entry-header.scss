@@ -14,7 +14,7 @@
 .entry-meta,
 .entry-footer {
 
-	color: #{map-deep-get($config-global, "color", "foreground-light")};
+	color: #{map-deep-get($config-global, "color", "foreground", "light")};
 	clear: both;
 	float: none;
 	font-size: #{map-deep-get($config-global, "font", "size", "sm")};
@@ -43,7 +43,7 @@
 
 		&:hover,
 		&:active {
-			color: #{map-deep-get($config-global, "color", "primary-hover")};
+			color: #{map-deep-get($config-global, "color", "primary", "hover")};
 		}
 	}
 

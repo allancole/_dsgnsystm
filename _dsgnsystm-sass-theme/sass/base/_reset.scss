@@ -93,7 +93,7 @@ html {
 body {
   font-size: #{map-deep-get($config-global, "font", "size", "md")};
   font-weight: normal;
-  color: #{map-deep-get($config-global, "color", "foreground")};
+  color: #{map-deep-get($config-global, "color", "foreground", "default")};
   text-align: left;
   background-color: #{map-deep-get($config-global, "color", "background")};
 }
@@ -101,10 +101,10 @@ body {
 // Links styles
 
 a {
-	color: #{map-deep-get($config-global, "color", "primary")};
+	color: #{map-deep-get($config-global, "color", "primary", "default")};
 
 	&:hover {
-		color: #{map-deep-get($config-global, "color", "primary-hover")};
+		color: #{map-deep-get($config-global, "color", "primary", "hover")};
 	}
 }
 

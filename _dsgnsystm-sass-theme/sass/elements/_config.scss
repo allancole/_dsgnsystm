@@ -4,9 +4,9 @@ $config-elements: (
 
 		// Colors
 		"color": (
-			"text": map-deep-get($config-global, "color", "foreground"),
+			"text": map-deep-get($config-global, "color", "foreground", "default"),
 			"border": map-deep-get($config-global, "color", "border"),
-			"border-focus": map-deep-get($config-global, "color", "primary-hover"),
+			"border-focus": map-deep-get($config-global, "color", "primary", "hover"),
 		),
 
 		// Fonts

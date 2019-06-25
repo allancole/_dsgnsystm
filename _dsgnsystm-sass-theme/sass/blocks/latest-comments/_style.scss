@@ -23,7 +23,7 @@
 	}
 
 	.wp-block-latest-comments__comment-date {
-		color: #{map-deep-get($config-global, "color", "foreground-light")};
+		color: #{map-deep-get($config-global, "color", "foreground", "light")};
 		font-size: #{map-deep-get($config-global, "font", "size", "sm")};
 	}
 

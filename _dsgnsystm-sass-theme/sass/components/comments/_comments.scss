@@ -115,7 +115,7 @@
 
 			&:hover,
 			&:active {
-				color: #{map-deep-get($config-global, "color", "primary-hover")};
+				color: #{map-deep-get($config-global, "color", "primary", "hover")};
 			}
 		}
 	}

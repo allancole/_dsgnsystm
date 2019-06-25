@@ -54,6 +54,55 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  * $__prefix-default-config: map-deep-set($__prefix-default-config, "layouts" "M", 650px);
  */
 /**
+ * jQuery-style extend function
+ * - Child themes can use this function to `reset` the values in
+ *   config maps without editing the `master` Sass files.
+ * - src: https://www.sitepoint.com/extra-map-functions-sass/
+ * - About `map-merge()`:
+ * - - only takes 2 arguments
+ * - - is not recursive
+ * @param {Map} $map - first map
+ * @param {ArgList} $maps - other maps
+ * @param {Bool} $deep - recursive mode
+ * @return {Map}
+ *
+ * Examples:
+
+$grid-configuration-default: (
+	'columns': 12,
+	'layouts': (
+		'small': 800px,
+		'medium': 1000px,
+		'large': 1200px,
+	),
+);
+
+$grid-configuration-custom: (
+	'layouts': (
+		'large': 1300px,
+		'huge': 1500px
+	),
+);
+
+$grid-configuration-user: (
+	'direction': 'ltr',
+	'columns': 16,
+	'layouts': (
+		'large': 1300px,
+		'huge': 1500px
+	),
+);
+
+// $deep: false
+$grid-configuration: map-extend($grid-configuration-default, $grid-configuration-custom, $grid-configuration-user);
+// --> ("columns": 16, "layouts": (("large": 1300px, "huge": 1500px)), "direction": "ltr")
+
+// $deep: true
+$grid-configuration: map-extend($grid-configuration-default, $grid-configuration-custom, $grid-configuration-user, true);
+// --> ("columns": 16, "layouts": (("small": 800px, "medium": 1000px, "large": 1300px, "huge": 1500px)), "direction": "ltr")
+
+ */
+/**
  * Button
  */
 /**
@@ -74,11 +123,18 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /**
  * Separator
  */
-/* Collect Root Variables??? */
-:root {
-  /* global variables */
-}
-
+/**
+ * Responsive breakpoints
+ * - breakpoints values are defined in _config-global.scss
+ */
+/**
+ * Align widths
+ * - Sets negative margin for .alignwide and .alignfull blocks
+ */
+/**
+ * Align container widths
+ * - Sets a fixed-width on content within alignwide and alignfull blocks
+ */
 /**
  * Base
  * - Reset the browser
@@ -1178,6 +1234,7 @@ input[type="submit"].has-focus,
 .wp-block-gallery .blocks-gallery-item figcaption {
   margin: 0;
   color: white;
+  font-size: 0.75rem;
 }
 
 .wp-block-gallery .blocks-gallery-image,
@@ -1227,8 +1284,8 @@ h5, .h5 {
 
 h6, .h6 {
   font-size: 22px;
-  letter-spacing: 0;
-  line-height: 1;
+  letter-spacing: 0.025em;
+  line-height: 1.75em;
 }
 
 .wp-block-image figcaption {
@@ -1358,8 +1415,8 @@ dd {
 }
 
 .wp-block-media-text .wp-block-media-text__content h1, .wp-block-media-text .wp-block-media-text__content h2, .wp-block-media-text .wp-block-media-text__content h3, .wp-block-media-text .wp-block-media-text__content h4, .wp-block-media-text .wp-block-media-text__content h5, .wp-block-media-text .wp-block-media-text__content h6, .wp-block-media-text .wp-block-media-text__content p {
-  margin-top: 32px;
-  margin-bottom: 32px;
+  margin-top: 18px;
+  margin-bottom: 18px;
 }
 
 .wp-block-media-text .wp-block-media-text__content h1:first-child, .wp-block-media-text .wp-block-media-text__content h2:first-child, .wp-block-media-text .wp-block-media-text__content h3:first-child, .wp-block-media-text .wp-block-media-text__content h4:first-child, .wp-block-media-text .wp-block-media-text__content h5:first-child, .wp-block-media-text .wp-block-media-text__content h6:first-child, .wp-block-media-text .wp-block-media-text__content p:first-child {
@@ -1379,6 +1436,10 @@ dd {
   .wp-block-media-text.is-stacked-on-mobile .wp-block-media-text__content {
     padding: 0 1rem;
   }
+}
+
+p.has-background {
+  padding: 18px 18px;
 }
 
 .wp-block-pullquote {
@@ -1423,7 +1484,7 @@ dd {
 }
 
 .wp-block-quote {
-  border-left-color: blue;
+  border-left-color: ("default": blue, "hover": indigo);
   margin: 32px 0;
   padding: 0 1rem;
   /**
@@ -1458,7 +1519,7 @@ dd {
 }
 
 .wp-block-quote[style*="text-align:right"], .wp-block-quote[style*="text-align: right"] {
-  border-right-color: blue;
+  border-right-color: ("default": blue, "hover": indigo);
 }
 
 .wp-block-quote.is-style-large, .wp-block-quote.is-large {
@@ -2132,7 +2193,7 @@ table th,
 }
 
 .comment-meta .comment-metadata {
-  color: #111111;
+  color: ("default": #111111, "light": #767676, "dark": #444444);
 }
 
 .comment-meta .comment-metadata a {
@@ -2284,7 +2345,7 @@ table th,
  */
 .sticky-post {
   color: white;
-  background-color: blue;
+  background-color: ("default": blue, "hover": indigo);
   font-family: sans-serif;
   font-weight: bold;
   font-size: 0.875rem;

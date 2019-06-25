@@ -8,7 +8,7 @@
 	border-top-width: #{map-deep-get($config-pullquote, "border", "width")};
 	border-bottom-color: #{map-deep-get($config-global, "color", "border")};
 	border-bottom-width: #{map-deep-get($config-pullquote, "border", "width")};
-	color: #{map-deep-get($config-global, "color", "foreground")};
+	color: #{map-deep-get($config-global, "color", "foreground", "default")};
 
 	p {
 		font-size: #{map-deep-get($config-heading, "font", "size", "h4")};
@@ -19,7 +19,7 @@
 	.wp-block-pullquote__citation,
 	cite,
 	footer {
-		color: #{map-deep-get($config-global, "color", "foreground-light")};
+		color: #{map-deep-get($config-global, "color", "foreground", "light")};
 		font-size: #{map-deep-get($config-global, "font", "size", "sm")};
 		letter-spacing: #{map-deep-get($config-global, "font", "letter-spacing", "sm")};
 	}
