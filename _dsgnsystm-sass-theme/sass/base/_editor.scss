@@ -1,0 +1,31 @@
+html {
+	font-size: var(--global--font-size-base);
+	font-family: var(--global--font-secondary);
+	line-height: var(--global--font-line-height);
+}
+
+body {
+	font-size: var(--global--font-size-md);
+	font-weight: normal;
+	color: var(--global--color-foreground);
+	background-color: var(--global--color-background);
+}
+
+p {
+	line-height: var(--global--font-line-height);
+}
+
+// Links styles
+
+a {
+	color: var(--global--color-primary);
+
+	&:hover {
+		color: var(--global--color-primary-hover);
+	}
+}
+
+button,
+a {
+  cursor: pointer;
+}

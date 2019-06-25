@@ -1,0 +1,51 @@
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+	font-family: #{map-deep-get($config-heading, "font", "family")};
+	font-weight: #{map-deep-get($config-heading, "font", "weight")};
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4 {
+	line-height: #{map-deep-get($config-heading, "font", "line-height", "lg")};
+}
+
+h5, .h5,
+h6, .h6 {
+	line-height: #{map-deep-get($config-heading, "font", "line-height", "md")};
+}
+
+h1, .h1 {
+	font-size: #{map-deep-get($config-heading, "font", "size", "1")};
+	letter-spacing: #{map-deep-get($config-heading, "font", "letter-spacing", "1")};
+}
+
+h2, .h2 {
+	font-size: #{map-deep-get($config-heading, "font", "size", "2")};
+	letter-spacing: #{map-deep-get($config-heading, "font", "letter-spacing", "2")};
+}
+
+h3, .h3 {
+	font-size: #{map-deep-get($config-heading, "font", "size", "3")};
+	letter-spacing: #{map-deep-get($config-heading, "font", "letter-spacing", "3")};
+}
+
+h4, .h4 {
+	font-size: #{map-deep-get($config-heading, "font", "size", "4")};
+	letter-spacing: #{map-deep-get($config-heading, "font", "letter-spacing", "4")};
+}
+
+h5, .h5 {
+	font-size: #{map-deep-get($config-heading, "font", "size", "5")};
+	letter-spacing: #{map-deep-get($config-heading, "font", "letter-spacing", "5")};
+}
+
+h6, .h6 {
+	font-size: #{map-deep-get($config-heading, "font", "size", "6")};
+	letter-spacing: #{map-deep-get($config-heading, "font", "letter-spacing", "6")};
+}

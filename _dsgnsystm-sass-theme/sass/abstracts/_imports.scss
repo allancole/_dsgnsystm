@@ -1,0 +1,15 @@
+/**
+ * Abstracts
+ * - Mixins, variables and functions
+ */
+
+@import "functions";
+@import "global-variables";
+@import "block-variables";
+@import "mixins";
+@import "responsive-logic";
+
+:root {
+	/* global variables */
+	@include global-variables;
+}

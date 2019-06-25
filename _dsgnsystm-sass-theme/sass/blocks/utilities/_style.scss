@@ -1,0 +1,103 @@
+/* Text Alignments */
+.alignleft {
+	/*rtl:ignore*/
+	text-align: left;
+	/*rtl:ignore*/
+	float: left;
+	/*rtl:ignore*/
+	margin-right: #{map-deep-get($config-global, "spacing", "horizontal")};
+	margin-top: 0;
+	margin-bottom: #{map-deep-get($config-global, "spacing", "vertical")};
+	max-width: 50%;
+}
+
+.aligncenter {
+	clear: both;
+	float: none;
+	text-align: center;
+}
+
+.alignright {
+	/*rtl:ignore*/
+	float: right;
+	/*rtl:ignore*/
+	margin-left: #{map-deep-get($config-global, "spacing", "horizontal")};
+	margin-top: 0;
+	margin-bottom: #{map-deep-get($config-global, "spacing", "vertical")};
+	max-width: 50%;
+}
+
+.alignwide {
+	@extend %responsive-wide-width;
+}
+
+.alignfull {
+	@extend %responsive-full-width;
+}
+
+// Content alignment
+.has-left-content {
+	justify-content: flex-start;
+}
+
+.has-right-content {
+	justify-content: flex-end;
+}
+
+// Parallax
+.has-parallax {
+    background-attachment: fixed;
+}
+
+// Gutenberg Font-size options
+.is-small-text,
+.has-small-font-size {
+	font-size: #{map-deep-get($config-global, "font", "size", "sm")};
+}
+
+.is-regular-text,
+.has-regular-font-size,
+.has-normal-font-size,
+.has-medium-font-size {
+	font-size: #{map-deep-get($config-global, "font", "size", "md")};
+}
+
+.is-large-text,
+.has-large-font-size {
+	font-size: #{map-deep-get($config-heading, "font", "size", "3")};
+	line-height: #{map-deep-get($config-heading, "font", "line-height", "lg")};
+}
+
+.is-larger-text,
+.has-larger-font-size,
+.has-huge-font-size {
+	font-size: #{map-deep-get($config-heading, "font", "size", "1")};
+	line-height: #{map-deep-get($config-heading, "font", "line-height", "xxl")};
+}
+
+// Drop caps
+.has-drop-cap:not(:focus)::first-letter {
+	font-family: #{map-deep-get($config-heading, "font", "family")};
+	font-size: calc(2 * #{map-deep-get($config-heading, "font", "size", "1")};);
+	font-weight: #{map-deep-get($config-heading, "font", "weight")};
+	line-height: 0.66;
+	text-transform: uppercase;
+	font-style: normal;
+	float: left;
+	margin: 0.1em 0.1em 0 0;
+}
+
+.has-drop-cap:not(:focus)::after {
+	content: "";
+	display: table;
+	clear: both;
+	padding-top: 14px;
+}
+
+.desktop-only {
+	display: none;
+
+	@include media(mobile) {
+		display: block;
+	}
+}

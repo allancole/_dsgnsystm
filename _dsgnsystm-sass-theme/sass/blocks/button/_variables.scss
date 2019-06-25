@@ -1,0 +1,26 @@
+/**
+ * Button
+ */
+$config-button: (
+	// Colors
+	"color": (
+		"text": map-deep-get($config-global, "color", "background"),
+		"text-hover": map-deep-get($config-global, "color", "background"),
+		"background": map-deep-get($config-global, "color", "primary"),
+		"background-hover": map-deep-get($config-global, "color", "primary-hover"),
+	),
+	// Fonts
+	"font": (
+		"family": map-deep-get($config-global, "font", "family", "primary"),
+		"size": map-deep-get($config-global, "font", "size", "md"),
+		"weight": bold,
+		"line-height": 1,
+	),
+	// Borders
+	"border-radius": map-deep-get($config-global, "border-radius", "sm"),
+	// Padding
+	"padding": (
+		"vertical": calc( 0.75 * #{map-deep-get($config-global, "spacing", "unit")} ),
+		"horizontal": map-deep-get($config-global, "spacing", "unit"),
+	),
+);

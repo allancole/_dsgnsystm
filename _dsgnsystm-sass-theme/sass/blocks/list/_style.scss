@@ -1,0 +1,33 @@
+:root {
+	--list--font-family: var(--global--font-secondary);
+	--definition-term--font-family: var(--global--font-primary);
+}
+
+ul,
+ol {
+	font-family: var(--list--font-family);
+	margin: 0 0 0 #{map-deep-get($config-global, "spacing", "unit")};
+	padding: 0;
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+
+}
+
+dt {
+	font-family: var(--definition-term--font-family);
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 0 0 #{map-deep-get($config-global, "spacing", "unit")};
+}

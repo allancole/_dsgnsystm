@@ -1,0 +1,20 @@
+.footer-navigation {
+
+	display: inline;
+
+	& > div {
+		display: inline;
+	}
+
+	.footer-menu {
+
+		display: inline;
+		padding-left: 0;
+
+		li {
+			display: inline;
+			margin-right: var(--global-spacing-unit);
+		}
+	}
+
+}

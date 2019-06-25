@@ -1,0 +1,47 @@
+/* Next/Previous navigation */
+
+// Singular navigation
+.post-navigation {
+
+	.meta-nav {
+		font-size: var(--global--font-size-xs);
+	}
+
+	.post-title {
+		font-size: var(--global--font-size-lg);
+		font-weight: 600;
+	}
+
+	.nav-next,
+	.nav-previous {
+		margin-top: var(--global--vertical-spacing-unit);
+		margin-bottom: var(--global--vertical-spacing-unit);
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+@include media(mobile) {
+
+	.nav-links {
+		display: flex;
+		justify-content: space-between;
+
+		.nav-next,
+		.nav-previous {
+			flex: 0 1 calc(50% - (0.5 * #{map-deep-get($config-global, "spacing", "unit")}));
+			margin-bottom: inherit;
+			margin-top: inherit;
+		}
+
+		.nav-next {
+			text-align: right;
+		}
+	}
+}

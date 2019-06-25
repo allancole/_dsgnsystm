@@ -1,0 +1,60 @@
+/* Collect Root Variables??? */
+@mixin local-root-variables {
+    :root {
+        @content;
+    }
+}
+
+@mixin media( $res ) {
+
+	@if mobile-only == $res {
+		@media only screen and (max-width: calc(map-deep-get($config-global, "breakpoint", "sm") - 1)) {
+			@content;
+		}
+	}
+
+	@if mobile == $res {
+		@media only screen and (min-width: map-deep-get($config-global, "breakpoint", "sm")) {
+			@content;
+		}
+	}
+
+	@if tablet == $res {
+		@media only screen and (min-width: map-deep-get($config-global, "breakpoint", "md")) {
+			@content;
+		}
+	}
+
+	@if laptop == $res {
+		@media only screen and (min-width: map-deep-get($config-global, "breakpoint", "lg")) {
+			@content;
+		}
+	}
+
+	@if desktop == $res {
+		@media only screen and (min-width: map-deep-get($config-global, "breakpoint", "xl")) {
+			@content;
+		}
+	}
+
+	@if wide == $res {
+		@media only screen and (min-width: map-deep-get($config-global, "breakpoint", "xxl")) {
+			@content;
+		}
+	}
+}
+
+@mixin align-width( $width: 100%, $multiplier: -0.25 ) {
+
+	$positive_multiplier: abs($multiplier);
+
+	margin-left: calc( #{$multiplier} * ( 100vw - #{$width} ) );
+	margin-right: calc( #{$multiplier} * ( 100vw - #{$width} ) );
+	width: calc( #{$width} + (#{$positive_multiplier} * 2) * ( 100vw - #{$width} ) );
+	max-width: calc( #{$width} + (#{$positive_multiplier} * 2) * ( 100vw - #{$width} ) );
+}
+
+@mixin align-container-width( $width: 100%, $multiplier: "2", $columns: "12" ) {
+	max-width: calc( #{$width} - (#{$multiplier} * ( #{$width} / #{$columns} )));
+	width: calc( #{$width} - (#{$multiplier} * ( #{$width} / #{$columns} )));
+}

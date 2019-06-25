@@ -1,0 +1,46 @@
+/**
+ * Editor Post Title
+ * - Needs a special styles
+ */
+
+.editor-post-title__block .editor-post-title__input {
+	color: var(--global--color-foreground);
+	font-family: var(--heading--font-family);
+	font-weight: var(--heading--font-weight);
+	font-size: var(--heading--font-size-2);
+	letter-spacing: var(--heading--letter-spacing-1);
+	line-height: var(--heading--line-height);
+}
+
+// Gutenberg Font-size utility classes
+.is-small-text,
+.has-small-font-size {
+	font-size: var(--global--font-size-sm);
+}
+
+.is-regular-text,
+.has-regular-font-size,
+.has-normal-font-size,
+.has-medium-font-size {
+	font-size: var(--global--font-size-md);
+}
+
+.is-large-text,
+.has-large-font-size {
+	font-size: var(--heading--font-size-3);
+	line-height: var(--heading--line-height);
+}
+
+.is-larger-text,
+.has-larger-font-size,
+.has-huge-font-size {
+	font-size: var(--heading--font-size-1);
+	line-height: var(--heading--line-height);
+}
+
+// Drop cap
+.has-drop-cap:not(:focus)::first-letter {
+	font-family: var(--heading--font-family);
+	font-size: calc(2 * var(--heading--font-size-1));
+	font-weight: var(--heading--font-weight);
+}

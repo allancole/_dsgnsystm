@@ -1,0 +1,39 @@
+/**
+ * Heading
+ */
+$config-heading: (
+	// Fonts & Typography
+	"font": (
+		// Family
+		"family": map-deep-get($config-global, "font", "family", "primary"),
+		// Size
+		"size": (
+			"6": map-deep-get($config-global, "font", "size", "base"),
+			"5": map-deep-get($config-global, "font", "size", "md"),
+			"4": map-deep-get($config-global, "font", "size", "lg"),
+			"3": map-deep-get($config-global, "font", "size", "xl"),
+			"2": map-deep-get($config-global, "font", "size", "xxl"),
+			"1": map-deep-get($config-global, "font", "size", "xxxl"),
+		),
+		// Letter spacing
+		"line-height": (
+			"6": map-deep-get($config-global, "font", "line-height", "base"),
+			"5": map-deep-get($config-global, "font", "line-height", "md"),
+			"4": map-deep-get($config-global, "font", "line-height", "lg"),
+			"3": map-deep-get($config-global, "font", "line-height", "xl"),
+			"2": map-deep-get($config-global, "font", "line-height", "xxl"),
+			"1": map-deep-get($config-global, "font", "line-height", "xxxl"),
+		),
+		// Letter spacing
+		"letter-spacing": (
+			"6": map-deep-get($config-global, "font", "letter-spacing", "base"),
+			"5": map-deep-get($config-global, "font", "letter-spacing", "md"),
+			"4": map-deep-get($config-global, "font", "letter-spacing", "lg"),
+			"3": map-deep-get($config-global, "font", "letter-spacing", "xl"),
+			"2": map-deep-get($config-global, "font", "letter-spacing", "xxl"),
+			"1": map-deep-get($config-global, "font", "letter-spacing", "xxxl"),
+		),
+		// Font Weight
+		"weight": bold,
+	),
+);

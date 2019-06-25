@@ -1,0 +1,70 @@
+:root {
+
+	// Colors
+	--form--color-text: var(--global--color-foreground);
+	--form--color-border: var(--global--color-border);
+
+	// Fonts
+	--form--font-family: var(--global--font-secondary);
+	--form--font-size: var(--global--font-size-md);
+	--form--line-height: var(--heading-line-height);
+
+	// Borders
+	--form--border-width: 1px;
+	--form--border-radius: 3px;
+
+	// Spacing
+	--form--spacing-unit: calc(0.33 * #{map-deep-get($config-global, "spacing", "unit")});
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+	color: var(--form--color-text);
+	border: var(--form--border-width) solid var(--form--color-border);
+	border-radius: var(--form--border-radius);
+
+	&:focus {
+		color: var(--form--color-text);
+	}
+}
+
+select {
+	border: var(--form--border-width) solid var(--form--color-border);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"] {
+	padding: var(--form--spacing-unit);
+}
+
+textarea {
+	padding: var(--form--spacing-unit);
+	width: 100%;
+}

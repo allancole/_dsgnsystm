@@ -1,0 +1,27 @@
+:root {
+	--quote--border-color: var(--global--color-primary);
+}
+
+.wp-block-quote {
+    border-left: 4px solid var(--quote--border-color);
+    margin: var(--global--vertical-spacing-unit) 0;
+    padding-left: #{map-deep-get($config-global, "spacing", "horizontal")};
+
+	p {
+		font-size: var(--heading--font-size-4);
+		letter-spacing: var(--heading--letter-spacing-4);
+		line-height: var(--global--font-line-height);
+	}
+
+    &.is-large,
+    &.is-style-large {
+		border: none;
+		padding: 0 #{map-deep-get($config-global, "spacing", "horizontal")};
+
+		p {
+			font-size: var(--heading--font-size-3);
+			letter-spacing: var(--heading--letter-spacing-3);
+			line-height: var(--heading--line-height);
+		}
+	}
+}

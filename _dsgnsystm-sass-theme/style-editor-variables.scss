@@ -1,0 +1,14 @@
+/**
+ * These styles should be loaded by the Block Editor only
+ */
+
+/**
+ * Abstracts
+ * - Mixins, variables and functions
+ */
+@import "sass/abstracts/global-variables";
+
+:root {
+	/* global variables */
+	@include global-variables;
+}
