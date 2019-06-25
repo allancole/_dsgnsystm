@@ -1,4 +1,4 @@
-/* Sass Fucntions go here */
+/* Sass Functions go here */
 
 /**
  * Map deep get
@@ -9,7 +9,7 @@
  * @return {*} - Desired value
  *
  * Example:
- * $m-breakpoint: map-deep-get($o-grid-default-config, "layouts", "M");
+ * $m-breakpoint: map-deep-get($__prefix-default-config, "layouts", "M");
  */
 @function map-deep-get($map, $keys...) {
     @each $key in $keys {
@@ -28,7 +28,7 @@
  * @return {Map}
  *
  * Example:
- * $o-grid-default-config: map-deep-set($o-grid-default-config, "layouts" "M", 650px);
+ * $__prefix-default-config: map-deep-set($__prefix-default-config, "layouts" "M", 650px);
  */
 @function map-deep-set($map, $keys, $value) {
   $maps: ($map,);

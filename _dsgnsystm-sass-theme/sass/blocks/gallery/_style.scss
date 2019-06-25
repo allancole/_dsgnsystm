@@ -8,7 +8,7 @@
 		figcaption {
 			margin: 0;
 			// Text color is always white to account for default gradient background
-			color: var(--global--color-white);
+			color: #{map-deep-get($config-global, "color", "white")};
 		}
 	}
 
@@ -21,6 +21,6 @@
 	// Apply max-width to floated items that have no intrinsic width.
 	&.alignleft,
 	&.alignright {
-		max-width: calc( var(--global--width-content) / 2 );
+		@extend %responsive-align-container;
 	}
 }

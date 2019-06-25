@@ -5,7 +5,7 @@
  * Abstracts
  * - Mixins, variables and functions
  */
-/* Sass Fucntions go here */
+/* Sass Functions go here */
 /**
  * Map deep get
  * @author Hugo Giraudel
@@ -15,7 +15,7 @@
  * @return {*} - Desired value
  *
  * Example:
- * $m-breakpoint: map-deep-get($o-grid-default-config, "layouts", "M");
+ * $m-breakpoint: map-deep-get($__prefix-default-config, "layouts", "M");
  */
 /**
  * Deep set function to set a value in nested maps
@@ -27,7 +27,19 @@
  * @return {Map}
  *
  * Example:
- * $o-grid-default-config: map-deep-set($o-grid-default-config, "layouts" "M", 650px);
+ * $__prefix-default-config: map-deep-set($__prefix-default-config, "layouts" "M", 650px);
+ */
+/**
+ * Button
+ */
+/**
+ * Cover
+ */
+/**
+ * Heading
+ */
+/**
+ * Separator
  */
 /* Collect Root Variables??? */
 /**
@@ -35,28 +47,28 @@
  * - Reset the browser
  */
 html {
-  font-size: var(--global--font-size-base);
-  font-family: var(--global--font-secondary);
-  line-height: var(--global--font-line-height);
+  font-size: 1rem;
+  font-family: serif;
+  line-height: 1.75em;
 }
 
 body {
-  font-size: var(--global--font-size-md);
+  font-size: 1.125rem;
   font-weight: normal;
-  color: var(--global--color-foreground);
-  background-color: var(--global--color-background);
+  color: #111111;
+  background-color: white;
 }
 
 p {
-  line-height: var(--global--font-line-height);
+  line-height: 1.75em;
 }
 
 a {
-  color: var(--global--color-primary);
+  color: blue;
 }
 
 a:hover {
-  color: var(--global--color-primary-hover);
+  color: indigo;
 }
 
 button,
@@ -73,16 +85,15 @@ a {
  * - Styles for basic HTML elemants
  */
 blockquote p {
-  font-size: var(--heading--font-size-4);
-  letter-spacing: var(--heading--letter-spacing-4);
-  line-height: var(--heading--line-height);
+  font-size: 1.5rem;
+  letter-spacing: 0;
+  line-height: 1.125em;
 }
 
 blockquote cite,
 blockquote footer {
-  color: var(--global--color-foreground-light);
-  font-size: var(--global--font-size-sm);
-  letter-spacing: var(--global--letter-spacing-sm);
+  font-size: 0.875rem;
+  letter-spacing: 0.0625em;
 }
 
 blockquote > * {
@@ -99,7 +110,7 @@ blockquote > *:last-child {
 }
 
 blockquote.alignleft p, blockquote.alignright p {
-  font-size: var(--heading--font-size-5);
+  font-size: 1.125rem;
   max-width: inherit;
   width: inherit;
 }
@@ -107,13 +118,13 @@ blockquote.alignleft p, blockquote.alignright p {
 blockquote.alignleft cite,
 blockquote.alignleft footer, blockquote.alignright cite,
 blockquote.alignright footer {
-  font-size: var(--global--font-size-xs);
-  letter-spacing: var(--global--letter-spacing-xs);
+  font-size: 0.66rem;
+  letter-spacing: 0.125em;
 }
 
 figcaption {
-  color: var(--global--color-foreground-light);
-  font-size: var(--global--font-size-xs);
+  color: #767676;
+  font-size: 0.66rem;
   margin-top: calc(0.5 * 32px);
   margin-bottom: 32px;
   text-align: center;

@@ -3,8 +3,8 @@ figure {
 }
 
 figcaption {
-	color: var(--global--color-foreground-light);
-	font-size: var(--global--font-size-xs);
+	color: #{map-deep-get($config-global, "color", "foreground-light")};
+	font-size: #{map-deep-get($config-global, "font", "size", "xs")};
 	margin-top: calc(0.5 * #{map-deep-get($config-global, "spacing", "vertical")});
 	margin-bottom: #{map-deep-get($config-global, "spacing", "vertical")};
 	text-align: center;

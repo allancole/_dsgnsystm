@@ -1,11 +1,7 @@
-:root {
-	--quote--border-color: var(--global--color-primary);
-}
-
 .wp-block-quote {
 
-	border-left-color: var(--quote--border-color);
-	margin: var(--global--vertical-spacing-unit) 0;
+	border-left-color: #{map-deep-get($config-global, "color", "primary")};
+	margin: #{map-deep-get($config-global, "spacing", "vertical")} 0;
 	padding: 0 #{map-deep-get($config-global, "spacing", "horizontal")};
 
 	& > * {
@@ -22,17 +18,17 @@
 	}
 
 	p {
-		font-size: var(--heading--font-size-4);
-		letter-spacing: var(--heading--letter-spacing-4);
-		line-height: var(--global--font-line-height);
+		font-size: #{map-deep-get($config-heading, "font", "size", "h4")};
+		letter-spacing: #{map-deep-get($config-heading, "font", "letter-spacing", "h4")};
+		line-height: #{map-deep-get($config-global, "font", "line-height", "h4")};
 	}
 
 	.wp-block-quote__citation,
 	cite,
 	footer {
-		color: var(--global--color-foreground-light);
-		font-size: var(--global--font-size-sm);
-		letter-spacing: var(--global--letter-spacing-sm);
+		color: #{map-deep-get($config-global, "color", "foreground-light")};
+		font-size: #{map-deep-get($config-global, "font", "size", "sm")};
+		letter-spacing: #{map-deep-get($config-global, "font", "letter-spacing", "sm")};
 	}
 
 	/**
@@ -40,19 +36,19 @@
 	 */
 	&[style*="text-align:right"],
 	&[style*="text-align: right"] {
-		border-right-color: var(--quote--border-color);
+		border-right-color: #{map-deep-get($config-global, "color", "primary")};
 	}
 
 	&.is-style-large,
 	&.is-large {
 		/* Resetting margins to match _block-container.scss */
-		margin-top: var(--global--vertical-spacing-unit);
-		margin-bottom: var(--global--vertical-spacing-unit);
+		margin-top: #{map-deep-get($config-global, "spacing", "vertical")};
+		margin-bottom: #{map-deep-get($config-global, "spacing", "vertical")};
 
 		p {
-			font-size: var(--heading--font-size-3);
-			letter-spacing: var(--heading--letter-spacing-3);
-			line-height: var(--heading--line-height);
+			font-size: #{map-deep-get($config-heading, "font", "size", "h3")};
+			letter-spacing: #{map-deep-get($config-heading, "font", "letter-spacing", "h3")};
+			line-height: #{map-deep-get($config-heading, "font", "line-height", "h3")};
 		}
 	}
 }

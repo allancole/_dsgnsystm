@@ -39,7 +39,9 @@ $config-global: (
 		),
 		/* Line Height */
 		"line-height": (
-			"base": 1.75em,
+			"base": 1,
+			"body": 1.75em,
+			"heading": 1.125em,
 			"xs": 1.75em,
 			"sm": 1.75em,
 			"md": 1.75em,

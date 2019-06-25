@@ -4,18 +4,18 @@
 .post-navigation {
 
 	.meta-nav {
-		font-size: var(--global--font-size-xs);
+		font-size: #{map-deep-get($config-global, "font", "size", "xs")};
 	}
 
 	.post-title {
-		font-size: var(--global--font-size-lg);
+		font-size: #{map-deep-get($config-global, "font", "size", "lg")};
 		font-weight: 600;
 	}
 
 	.nav-next,
 	.nav-previous {
-		margin-top: var(--global--vertical-spacing-unit);
-		margin-bottom: var(--global--vertical-spacing-unit);
+		margin-top: #{map-deep-get($config-global, "spacing", "vertical")};
+		margin-bottom: #{map-deep-get($config-global, "spacing", "vertical")};
 
 		&:first-child {
 			margin-top: 0;

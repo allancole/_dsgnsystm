@@ -1650,6 +1650,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"/sass/blocks/separator/_variables.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/sass/blocks/separator/_variables.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"/sass/blocks/spacer/_editor.scss": {
 		"aP": 0,
 		"bl": 0,

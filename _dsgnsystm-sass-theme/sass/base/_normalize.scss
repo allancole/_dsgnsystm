@@ -87,8 +87,8 @@ hr {
  */
 
 pre {
-  font-family: var(--global--font-code);
-  font-size: var(--global--font-size-md); /* 1 */
+  font-family: #{map-deep-get($config-global, "font", "family", "code")};
+  font-size: #{map-deep-get($config-global, "font", "size", "md")}; /* 1 */
   overflow: scroll;
 }
 
@@ -141,8 +141,8 @@ strong {
 code,
 kbd,
 samp {
-  font-family: var(--global--font-code);
-  font-size: var(--global--font-size-md); /* 1 */
+  font-family: #{map-deep-get($config-global, "font", "family", "code")};
+  font-size: #{map-deep-get($config-global, "font", "size", "md")}; /* 1 */
 }
 
 /**
@@ -158,8 +158,8 @@ dfn {
  */
 
 mark {
-  background-color: var(--global--color-border);
-  color: var(--global--color-black);
+  background-color: #{map-deep-get($config-global, "color", "border")};
+  color: #{map-deep-get($config-global, "color", "black")};
 }
 
 /**
@@ -168,14 +168,14 @@ mark {
 
 figcaption,
 small {
-  font-size: var(--global--font-size-xs);
-  letter-spacing: var(--global--letter-spacing-xs);
-  line-height: var(--heading--line-height);
+  font-size: #{map-deep-get($config-global, "font", "size", "xs")};
+  letter-spacing: #{map-deep-get($config-global, "font", "letter-spacing", "xs")};
+  line-height: #{map-deep-get($config-heading, "font", "line-height", "heading")};
 }
 
 big{
-  font-size: var(--global--font-size-xxxl);
-  letter-spacing: var(--global--letter-spacing-xxxl);
+  font-size: #{map-deep-get($config-global, "font", "size", "xxxl")};
+  letter-spacing: #{map-deep-get($config-global, "font", "letter-spacing", "xxxl")};
 }
 
 /**
@@ -185,7 +185,7 @@ big{
 
 sub,
 sup {
-  font-size: var(--global--font-size-xs);
+  font-size: #{map-deep-get($config-global, "font", "size", "xs")};
   line-height: 0;
   position: relative;
   vertical-align: baseline;
@@ -249,9 +249,9 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: var(--global--font-ui); /* 1 */
+  font-family: #{map-deep-get($config-global, "font", "family", "ui")}; /* 1 */
   font-size: 100%; /* 1 */
-  line-height: var(--heading-line-height); /* 1 */
+  line-height: #{map-deep-get($config-global, "font", "line-height", "heading")}; /* 1 */
   margin: 0; /* 2 */
 }
 

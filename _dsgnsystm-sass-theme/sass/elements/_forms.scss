@@ -1,21 +1,26 @@
-:root {
+$config-form: (
 
 	// Colors
-	--form--color-text: var(--global--color-foreground);
-	--form--color-border: var(--global--color-border);
+	"color": (
+		"text": map-deep-get($config-global, "color", "foreground"),
+		"border": map-deep-get($config-global, "color", "border"),
+		"border-focus": map-deep-get($config-global, "color", "primary-hover"),
+	),
 
-	// Fonts
-	--form--font-family: var(--global--font-secondary);
-	--form--font-size: var(--global--font-size-md);
-	--form--line-height: var(--heading-line-height);
+	"font": (
+		"family": map-deep-get($config-global, "font", "family", "secondary"),
+		"line-height": map-deep-get($config-global, "font", "line-height", "md"),
+		"size": map-deep-get($config-global, "font", "size", "md"),
+		"weight": bold,
+	),
 
-	// Borders
-	--form--border-width: 1px;
-	--form--border-radius: 3px;
+	"border": (
+		"width": 1px,
+		"radius": 3px,
+	),
 
-	// Spacing
-	--form--spacing-unit: calc(0.33 * #{map-deep-get($config-global, "spacing", "unit")});
-}
+	"padding": calc( 0.33 * #{map-deep-get($config-global, "spacing", "unit")} ),
+);
 
 input[type="text"],
 input[type="email"],
@@ -33,38 +38,22 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-	color: var(--form--color-text);
-	border: var(--form--border-width) solid var(--form--color-border);
-	border-radius: var(--form--border-radius);
+	color: #{map-deep-get($config-form, "color", "text")};
+	border: #{map-deep-get($config-form, "border", "width")} solid #{map-deep-get($config-form, "color", "border")};
+	border-radius: #{map-deep-get($config-form, "border", "radius")};
+	padding: #{map-deep-get($config-form, "border", "padding")};
 
 	&:focus {
-		color: var(--form--color-text);
+		color: #{map-deep-get($config-form, "color", "text")};
+		border-color: #{map-deep-get($config-form, "color", "border-focus")};
 	}
 }
 
 select {
-	border: var(--form--border-width) solid var(--form--color-border);
-}
-
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"],
-input[type="number"],
-input[type="tel"],
-input[type="range"],
-input[type="date"],
-input[type="month"],
-input[type="week"],
-input[type="time"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="color"] {
-	padding: var(--form--spacing-unit);
+	border: #{map-deep-get($config-form, "border", "width")} solid #{map-deep-get($config-form, "color", "border")};
 }
 
 textarea {
-	padding: var(--form--spacing-unit);
+	padding: #{map-deep-get($config-form, "border", "padding")};
 	width: 100%;
 }

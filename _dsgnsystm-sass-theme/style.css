@@ -29,7 +29,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  * Abstracts
  * - Mixins, variables and functions
  */
-/* Sass Fucntions go here */
+/* Sass Functions go here */
 /**
  * Map deep get
  * @author Hugo Giraudel
@@ -39,7 +39,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  * @return {*} - Desired value
  *
  * Example:
- * $m-breakpoint: map-deep-get($o-grid-default-config, "layouts", "M");
+ * $m-breakpoint: map-deep-get($__prefix-default-config, "layouts", "M");
  */
 /**
  * Deep set function to set a value in nested maps
@@ -51,7 +51,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  * @return {Map}
  *
  * Example:
- * $o-grid-default-config: map-deep-set($o-grid-default-config, "layouts" "M", 650px);
+ * $__prefix-default-config: map-deep-set($__prefix-default-config, "layouts" "M", 650px);
  */
 /**
  * Button
@@ -61,6 +61,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  */
 /**
  * Heading
+ */
+/**
+ * Separator
  */
 /* Collect Root Variables??? */
 :root {
@@ -159,8 +162,8 @@ hr {
  * 1. Correct the odd `em` font sizing in all browsers.
  */
 pre {
-  font-family: var(--global--font-code);
-  font-size: var(--global--font-size-md);
+  font-family: monospace, monospace;
+  font-size: 1.125rem;
   /* 1 */
   overflow: scroll;
 }
@@ -213,8 +216,8 @@ strong {
 code,
 kbd,
 samp {
-  font-family: var(--global--font-code);
-  font-size: var(--global--font-size-md);
+  font-family: monospace, monospace;
+  font-size: 1.125rem;
   /* 1 */
 }
 
@@ -229,8 +232,8 @@ dfn {
  * Add the correct background and color in IE 9-.
  */
 mark {
-  background-color: var(--global--color-border);
-  color: var(--global--color-black);
+  background-color: #DDDDDD;
+  color: black;
 }
 
 /**
@@ -238,14 +241,13 @@ mark {
  */
 figcaption,
 small {
-  font-size: var(--global--font-size-xs);
-  letter-spacing: var(--global--letter-spacing-xs);
-  line-height: var(--heading--line-height);
+  font-size: 0.66rem;
+  letter-spacing: 0.125em;
 }
 
 big {
-  font-size: var(--global--font-size-xxxl);
-  letter-spacing: var(--global--letter-spacing-xxxl);
+  font-size: 3.375rem;
+  letter-spacing: -0.025em;
 }
 
 /**
@@ -254,7 +256,7 @@ big {
  */
 sub,
 sup {
-  font-size: var(--global--font-size-xs);
+  font-size: 0.66rem;
   line-height: 0;
   position: relative;
   vertical-align: baseline;
@@ -311,11 +313,11 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: var(--global--font-ui);
+  font-family: -apple-system\; BlinkMacSystemFont\; "Segoe UI"\; "Roboto"\; "Oxygen"\; "Ubuntu"\; "Cantarell"\; "Fira Sans"\; "Droid Sans"\; "Helvetica Neue"\; sans-serif;
   /* 1 */
   font-size: 100%;
   /* 1 */
-  line-height: var(--heading-line-height);
+  line-height: 1.125em;
   /* 1 */
   margin: 0;
   /* 2 */
@@ -591,25 +593,25 @@ th {
 }
 
 html {
-  font-size: var(--global--font-size-base);
-  font-family: var(--global--font-secondary);
-  line-height: var(--global--font-line-height);
+  font-size: 1rem;
+  font-family: serif;
+  line-height: 1.75em;
 }
 
 body {
-  font-size: var(--global--font-size-md);
+  font-size: 1.125rem;
   font-weight: normal;
-  color: var(--global--color-foreground);
+  color: #111111;
   text-align: left;
-  background-color: var(--global--color-background);
+  background-color: white;
 }
 
 a {
-  color: var(--global--color-primary);
+  color: blue;
 }
 
 a:hover {
-  color: var(--global--color-primary-hover);
+  color: indigo;
 }
 
 button,
@@ -633,14 +635,14 @@ a {
 }
 
 .screen-reader-text:focus {
-  background-color: var(--global--color-background);
+  background-color: white;
   border-radius: 3px;
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
   clip: auto !important;
   clip-path: none;
-  color: var(--global--color-foreground);
+  color: #111111;
   display: block;
-  font-size: var(--global--color-foreground);
+  font-size: 1.125rem;
   font-weight: bold;
   height: auto;
   left: 5px;
@@ -687,11 +689,11 @@ a {
 }
 
 ::selection {
-  background-color: var(--global--color-text-selection);
+  background-color: lightblue;
 }
 
 ::-moz-selection {
-  background-color: var(--global--color-text-selection);
+  background-color: lightblue;
 }
 
 /**
@@ -837,16 +839,15 @@ a {
  * - Styles for basic HTML elemants
  */
 blockquote p {
-  font-size: var(--heading--font-size-4);
-  letter-spacing: var(--heading--letter-spacing-4);
-  line-height: var(--heading--line-height);
+  font-size: 1.5rem;
+  letter-spacing: 0;
+  line-height: 1.125em;
 }
 
 blockquote cite,
 blockquote footer {
-  color: var(--global--color-foreground-light);
-  font-size: var(--global--font-size-sm);
-  letter-spacing: var(--global--letter-spacing-sm);
+  font-size: 0.875rem;
+  letter-spacing: 0.0625em;
 }
 
 blockquote > * {
@@ -863,7 +864,7 @@ blockquote > *:last-child {
 }
 
 blockquote.alignleft p, blockquote.alignright p {
-  font-size: var(--heading--font-size-5);
+  font-size: 1.125rem;
   max-width: inherit;
   width: inherit;
 }
@@ -871,19 +872,8 @@ blockquote.alignleft p, blockquote.alignright p {
 blockquote.alignleft cite,
 blockquote.alignleft footer, blockquote.alignright cite,
 blockquote.alignright footer {
-  font-size: var(--global--font-size-xs);
-  letter-spacing: var(--global--letter-spacing-xs);
-}
-
-:root {
-  --form--color-text: var(--global--color-foreground);
-  --form--color-border: var(--global--color-border);
-  --form--font-family: var(--global--font-secondary);
-  --form--font-size: var(--global--font-size-md);
-  --form--line-height: var(--heading-line-height);
-  --form--border-width: 1px;
-  --form--border-radius: 3px;
-  --form--spacing-unit: calc(0.33 * 18px);
+  font-size: 0.66rem;
+  letter-spacing: 0.125em;
 }
 
 input[type="text"],
@@ -902,9 +892,9 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-  color: var(--form--color-text);
-  border: var(--form--border-width) solid var(--form--color-border);
-  border-radius: var(--form--border-radius);
+  color: #111111;
+  border: 1px solid #DDDDDD;
+  border-radius: 3px;
 }
 
 input[type="text"]:focus,
@@ -923,39 +913,21 @@ input[type="datetime"]:focus,
 input[type="datetime-local"]:focus,
 input[type="color"]:focus,
 textarea:focus {
-  color: var(--form--color-text);
+  color: #111111;
+  border-color: indigo;
 }
 
 select {
-  border: var(--form--border-width) solid var(--form--color-border);
-}
-
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"],
-input[type="number"],
-input[type="tel"],
-input[type="range"],
-input[type="date"],
-input[type="month"],
-input[type="week"],
-input[type="time"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="color"] {
-  padding: var(--form--spacing-unit);
+  border: 1px solid #DDDDDD;
 }
 
 textarea {
-  padding: var(--form--spacing-unit);
   width: 100%;
 }
 
 figcaption {
-  color: var(--global--color-foreground-light);
-  font-size: var(--global--font-size-xs);
+  color: #767676;
+  font-size: 0.66rem;
   margin-top: calc(0.5 * 32px);
   margin-bottom: 32px;
   text-align: center;
@@ -1051,14 +1023,14 @@ input[type="submit"].has-focus,
 }
 
 .wp-block-code {
-  color: var(--global--color-foreground);
-  font-size: var(--global--font-size-sm);
+  color: #111111;
+  font-size: 0.875rem;
   padding: 18px;
-  border-color: var(--global--color-border);
+  border-color: #DDDDDD;
 }
 
 .wp-block-code pre {
-  color: var(--global--color-foreground);
+  color: #111111;
 }
 
 .wp-block-columns {
@@ -1114,8 +1086,6 @@ input[type="submit"].has-focus,
 
 .wp-block-cover h2,
 .wp-block-cover-image h2 {
-  font-size: 2.625rem;
-  letter-spacing: -0.0125em;
   max-width: inherit;
   text-align: inherit;
   padding: 0;
@@ -1144,9 +1114,9 @@ input[type="submit"].has-focus,
 }
 
 .wp-block-file .wp-block-file__button {
-  background: var(--global--color-primary);
-  color: var(--global--color-background);
-  font-size: var(--global--font-size-sm);
+  background-color: blue;
+  color: white;
+  font-size: 0.875rem;
   margin-left: 1rem;
   margin-right: 1rem;
 }
@@ -1155,7 +1125,7 @@ input[type="submit"].has-focus,
 .wp-block-file a.wp-block-file__button:focus,
 .wp-block-file a.wp-block-file__button:hover,
 .wp-block-file a.wp-block-file__button:visited {
-  color: var(--global--color-background);
+  color: white;
   opacity: .85;
 }
 
@@ -1166,16 +1136,12 @@ input[type="submit"].has-focus,
 .wp-block-gallery .blocks-gallery-image figcaption,
 .wp-block-gallery .blocks-gallery-item figcaption {
   margin: 0;
-  color: var(--global--color-white);
+  color: white;
 }
 
 .wp-block-gallery .blocks-gallery-image,
 .wp-block-gallery .blocks-gallery-item {
   width: calc( (100% - 18px) / 2);
-}
-
-.wp-block-gallery.alignleft, .wp-block-gallery.alignright {
-  max-width: calc( var(--global--width-content) / 2);
 }
 
 h1, .h1,
@@ -1186,6 +1152,18 @@ h5, .h5,
 h6, .h6 {
   font-family: sans-serif;
   font-weight: bold;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4 {
+  line-height: 1.125em;
+}
+
+h5, .h5,
+h6, .h6 {
+  line-height: 1.75em;
 }
 
 h1, .h1 {
@@ -1219,8 +1197,8 @@ h6, .h6 {
 }
 
 .wp-block-image figcaption {
-  color: var(--global--color-foreground-light);
-  font-size: var(--global--font-size-xs);
+  color: #767676;
+  font-size: 0.66rem;
   margin-top: calc(0.5 * 32px);
   margin-bottom: 32px;
   text-align: center;
@@ -1231,8 +1209,8 @@ h6, .h6 {
 }
 
 .wp-block-latest-comments .wp-block-latest-comments__comment {
-  font-size: var(--global--font-size-sm);
-  line-height: var(--global--font-line-height);
+  font-size: 0.875rem;
+  line-height: 1.75em;
   /* Vertical margins logic */
   margin-top: 32px;
   margin-bottom: 32px;
@@ -1247,17 +1225,17 @@ h6, .h6 {
 }
 
 .wp-block-latest-comments .wp-block-latest-comments__comment-meta {
-  font-family: var(--heading--font-family);
+  font-family: sans-serif;
 }
 
 .wp-block-latest-comments .wp-block-latest-comments__comment-date {
-  color: var(--global--color-foreground-light);
-  font-size: var(--global--font-size-sm);
+  color: #767676;
+  font-size: 0.875rem;
 }
 
 .wp-block-latest-comments .wp-block-latest-comments__comment-excerpt p {
-  font-size: var(--global--font-size-sm);
-  line-height: var(--global--font-line-height);
+  font-size: 0.875rem;
+  line-height: 1.75em;
   margin: 0;
 }
 
@@ -1377,36 +1355,32 @@ dd {
   margin-left: 0;
   margin-right: 0;
   text-align: center;
-  border-top-color: var(--global--color-border);
-  border-top-width: var(--pullquote--width-border);
-  border-bottom-color: var(--global--color-border);
-  border-bottom-width: var(--pullquote--width-border);
-  color: var(--global--color-foreground);
+  border-top-color: #DDDDDD;
+  border-top-width: 4px;
+  border-bottom-color: #DDDDDD;
+  border-bottom-width: 4px;
+  color: #111111;
   /**
 	 * Block Options
 	 */
 }
 
 .wp-block-pullquote p {
-  font-size: var(--heading--font-size-4);
-  letter-spacing: var(--heading--letter-spacing-4);
-  line-height: var(--heading--line-height);
+  font-size: 1.5rem;
+  letter-spacing: 0;
+  line-height: 1.125em;
 }
 
 .wp-block-pullquote .wp-block-pullquote__citation,
 .wp-block-pullquote cite,
 .wp-block-pullquote footer {
-  color: var(--global--color-foreground-light);
-  font-size: var(--global--font-size-sm);
-  letter-spacing: var(--global--letter-spacing-sm);
+  color: #767676;
+  font-size: 0.875rem;
+  letter-spacing: 0.0625em;
 }
 
 .wp-block-pullquote:not(.is-style-solid-color) {
   background: none;
-}
-
-.wp-block-pullquote.is-style-solid-color blockquote {
-  max-width: calc( var(--global--width-content) - (2 * calc( var(--global--width-content) / 12 )));
 }
 
 .wp-block-pullquote.alignwide > p,
@@ -1415,17 +1389,11 @@ dd {
 .wp-block-pullquote.alignfull blockquote {
   margin-left: auto;
   margin-right: auto;
-  max-width: calc( var(--global--width-content) - (2 * calc( var(--global--width-content) / 12 )));
-  width: calc(100% - (2 * calc( var(--global--width-content) / 12 )));
-}
-
-:root {
-  --quote--border-color: var(--global--color-primary);
 }
 
 .wp-block-quote {
-  border-left-color: var(--quote--border-color);
-  margin: var(--global--vertical-spacing-unit) 0;
+  border-left-color: blue;
+  margin: 32px 0;
   padding: 0 1rem;
   /**
 	 * Block Options
@@ -1446,44 +1414,38 @@ dd {
 }
 
 .wp-block-quote p {
-  font-size: var(--heading--font-size-4);
-  letter-spacing: var(--heading--letter-spacing-4);
-  line-height: var(--global--font-line-height);
+  font-size: 1.5rem;
+  letter-spacing: 0;
 }
 
 .wp-block-quote .wp-block-quote__citation,
 .wp-block-quote cite,
 .wp-block-quote footer {
-  color: var(--global--color-foreground-light);
-  font-size: var(--global--font-size-sm);
-  letter-spacing: var(--global--letter-spacing-sm);
+  color: #767676;
+  font-size: 0.875rem;
+  letter-spacing: 0.0625em;
 }
 
 .wp-block-quote[style*="text-align:right"], .wp-block-quote[style*="text-align: right"] {
-  border-right-color: var(--quote--border-color);
+  border-right-color: blue;
 }
 
 .wp-block-quote.is-style-large, .wp-block-quote.is-large {
   /* Resetting margins to match _block-container.scss */
-  margin-top: var(--global--vertical-spacing-unit);
-  margin-bottom: var(--global--vertical-spacing-unit);
+  margin-top: 32px;
+  margin-bottom: 32px;
 }
 
 .wp-block-quote.is-style-large p, .wp-block-quote.is-large p {
-  font-size: var(--heading--font-size-3);
-  letter-spacing: var(--heading--letter-spacing-3);
-  line-height: var(--heading--line-height);
-}
-
-:root {
-  --separator--height: 2px;
-  --separator--vertical-spacing-unit: calc(2 * var(--global--vertical-spacing-unit));
+  font-size: 2rem;
+  letter-spacing: 0;
+  line-height: 1.125em;
 }
 
 .wp-block-separator,
 hr {
-  border-bottom: var(--separator--height) solid var(--global--color-border);
-  margin: var(--separator--vertical-spacing-unit) auto;
+  border-bottom: 2px solid #DDDDDD;
+  margin: 32px auto;
   /**
 	 * Block Options
 	 */
@@ -1491,15 +1453,15 @@ hr {
 
 .wp-block-separator.is-style-wide,
 hr.is-style-wide {
-  border-bottom-width: var(--separator--height);
+  border-bottom-width: 2px;
 }
 
 .wp-block-separator.is-style-dots:before,
 hr.is-style-dots:before {
-  color: var(--global--color-border);
-  font-size: var(--global--font-size-xl);
-  letter-spacing: var(--global--font-size-sm);
-  padding-left: var(--global--font-size-sm);
+  color: #DDDDDD;
+  font-size: 2rem;
+  letter-spacing: 0.875rem;
+  padding-left: 0.875rem;
 }
 
 .wp-block-spacer {
@@ -1840,18 +1802,18 @@ hr.is-style-dots:before {
 
 /* Next/Previous navigation */
 .post-navigation .meta-nav {
-  font-size: var(--global--font-size-xs);
+  font-size: 0.66rem;
 }
 
 .post-navigation .post-title {
-  font-size: var(--global--font-size-lg);
+  font-size: 1.5rem;
   font-weight: 600;
 }
 
 .post-navigation .nav-next,
 .post-navigation .nav-previous {
-  margin-top: var(--global--vertical-spacing-unit);
-  margin-bottom: var(--global--vertical-spacing-unit);
+  margin-top: 32px;
+  margin-bottom: 32px;
 }
 
 .post-navigation .nav-next:first-child,
@@ -2130,10 +2092,6 @@ hr.is-style-dots:before {
  * Site Pages
  * - Page specific styles
  */
-.entry .entry-title {
-  font-size: 2.625rem;
-}
-
 .entry .entry-meta,
 .entry .entry-footer {
   color: #767676;
@@ -2445,7 +2403,10 @@ hr.is-style-dots:before {
 .wp-block-cover-image.has-left-content .wp-block-cover-text,
 .wp-block-cover-image.has-right-content .wp-block-cover__inner-container,
 .wp-block-cover-image.has-right-content .wp-block-cover-image-text,
-.wp-block-cover-image.has-right-content .wp-block-cover-text {
+.wp-block-cover-image.has-right-content .wp-block-cover-text, .wp-block-gallery.alignleft, .wp-block-gallery.alignright, .wp-block-pullquote.is-style-solid-color blockquote, .wp-block-pullquote.alignwide > p,
+.wp-block-pullquote.alignfull > p,
+.wp-block-pullquote.alignwide blockquote,
+.wp-block-pullquote.alignfull blockquote {
   max-width: calc( 100% - (2 * ( 100% / 12 )));
   width: calc( 100% - (2 * ( 100% / 12 )));
 }
@@ -2466,7 +2427,10 @@ hr.is-style-dots:before {
   .wp-block-cover-image.has-left-content .wp-block-cover-text,
   .wp-block-cover-image.has-right-content .wp-block-cover__inner-container,
   .wp-block-cover-image.has-right-content .wp-block-cover-image-text,
-  .wp-block-cover-image.has-right-content .wp-block-cover-text {
+  .wp-block-cover-image.has-right-content .wp-block-cover-text, .wp-block-gallery.alignleft, .wp-block-gallery.alignright, .wp-block-pullquote.is-style-solid-color blockquote, .wp-block-pullquote.alignwide > p,
+  .wp-block-pullquote.alignfull > p,
+  .wp-block-pullquote.alignwide blockquote,
+  .wp-block-pullquote.alignfull blockquote {
     max-width: calc( calc( 600px - 2rem) - (2 * ( calc( 600px - 2rem) / 12 )));
     width: calc( calc( 600px - 2rem) - (2 * ( calc( 600px - 2rem) / 12 )));
   }
@@ -2488,7 +2452,10 @@ hr.is-style-dots:before {
   .wp-block-cover-image.has-left-content .wp-block-cover-text,
   .wp-block-cover-image.has-right-content .wp-block-cover__inner-container,
   .wp-block-cover-image.has-right-content .wp-block-cover-image-text,
-  .wp-block-cover-image.has-right-content .wp-block-cover-text {
+  .wp-block-cover-image.has-right-content .wp-block-cover-text, .wp-block-gallery.alignleft, .wp-block-gallery.alignright, .wp-block-pullquote.is-style-solid-color blockquote, .wp-block-pullquote.alignwide > p,
+  .wp-block-pullquote.alignfull > p,
+  .wp-block-pullquote.alignwide blockquote,
+  .wp-block-pullquote.alignfull blockquote {
     max-width: calc( calc( 782px - 2rem) - (2 * ( calc( 782px - 2rem) / 12 )));
     width: calc( calc( 782px - 2rem) - (2 * ( calc( 782px - 2rem) / 12 )));
   }
@@ -2510,7 +2477,10 @@ hr.is-style-dots:before {
   .wp-block-cover-image.has-left-content .wp-block-cover-text,
   .wp-block-cover-image.has-right-content .wp-block-cover__inner-container,
   .wp-block-cover-image.has-right-content .wp-block-cover-image-text,
-  .wp-block-cover-image.has-right-content .wp-block-cover-text {
+  .wp-block-cover-image.has-right-content .wp-block-cover-text, .wp-block-gallery.alignleft, .wp-block-gallery.alignright, .wp-block-pullquote.is-style-solid-color blockquote, .wp-block-pullquote.alignwide > p,
+  .wp-block-pullquote.alignfull > p,
+  .wp-block-pullquote.alignwide blockquote,
+  .wp-block-pullquote.alignfull blockquote {
     max-width: calc( calc( 1024px - 2rem) - (2 * ( calc( 1024px - 2rem) / 12 )));
     width: calc( calc( 1024px - 2rem) - (2 * ( calc( 1024px - 2rem) / 12 )));
   }
@@ -2532,7 +2502,10 @@ hr.is-style-dots:before {
   .wp-block-cover-image.has-left-content .wp-block-cover-text,
   .wp-block-cover-image.has-right-content .wp-block-cover__inner-container,
   .wp-block-cover-image.has-right-content .wp-block-cover-image-text,
-  .wp-block-cover-image.has-right-content .wp-block-cover-text {
+  .wp-block-cover-image.has-right-content .wp-block-cover-text, .wp-block-gallery.alignleft, .wp-block-gallery.alignright, .wp-block-pullquote.is-style-solid-color blockquote, .wp-block-pullquote.alignwide > p,
+  .wp-block-pullquote.alignfull > p,
+  .wp-block-pullquote.alignwide blockquote,
+  .wp-block-pullquote.alignfull blockquote {
     max-width: calc( calc( 1024px - 2rem) - (2 * ( calc( 1024px - 2rem) / 12 )));
     width: calc( calc( 1024px - 2rem) - (2 * ( calc( 1024px - 2rem) / 12 )));
   }
@@ -2554,7 +2527,10 @@ hr.is-style-dots:before {
   .wp-block-cover-image.has-left-content .wp-block-cover-text,
   .wp-block-cover-image.has-right-content .wp-block-cover__inner-container,
   .wp-block-cover-image.has-right-content .wp-block-cover-image-text,
-  .wp-block-cover-image.has-right-content .wp-block-cover-text {
+  .wp-block-cover-image.has-right-content .wp-block-cover-text, .wp-block-gallery.alignleft, .wp-block-gallery.alignright, .wp-block-pullquote.is-style-solid-color blockquote, .wp-block-pullquote.alignwide > p,
+  .wp-block-pullquote.alignfull > p,
+  .wp-block-pullquote.alignwide blockquote,
+  .wp-block-pullquote.alignfull blockquote {
     max-width: calc( calc( 1024px - 2rem) - (2 * ( calc( 1024px - 2rem) / 12 )));
     width: calc( calc( 1024px - 2rem) - (2 * ( calc( 1024px - 2rem) / 12 )));
   }

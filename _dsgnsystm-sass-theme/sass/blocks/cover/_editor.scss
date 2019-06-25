@@ -1,3 +1,8 @@
 :root {
 	--cover--height: calc( 15 * var(--global--vertical-spacing-unit) );
 }
+
+.wp-block-cover,
+.wp-block-cover-image {
+	min-height: #{map-deep-get($config-cover, "height")};
+}

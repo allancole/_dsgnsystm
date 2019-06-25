@@ -1,27 +1,22 @@
-:root {
-	--separator--height: 2px;
-	--separator--vertical-spacing-unit: calc(2 * var(--global--vertical-spacing-unit));
-}
-
 .wp-block-separator,
 hr {
-    border-bottom: var(--separator--height) solid var(--global--color-border);
-	margin: var(--separator--vertical-spacing-unit) auto;
+    border-bottom: #{map-deep-get($config-separator, "height")} solid #{map-deep-get($config-global, "color", "border")};
+	margin: #{map-deep-get($config-global, "spacing", "vertical")} auto;
 
 	/**
 	 * Block Options
 	 */
 	&.is-style-wide {
-		border-bottom-width: var(--separator--height);
+		border-bottom-width: #{map-deep-get($config-separator, "height")};
 	}
 
 	&.is-style-dots {
 
 		&:before {
-			color: var(--global--color-border);
-			font-size: var(--global--font-size-xl);
-			letter-spacing: var(--global--font-size-sm);
-			padding-left: var(--global--font-size-sm);
+			color: #{map-deep-get($config-global, "color", "border")};
+			font-size: #{map-deep-get($config-global, "font", "size", "xl")};
+			letter-spacing: #{map-deep-get($config-global, "font", "size", "sm")};
+			padding-left: #{map-deep-get($config-global, "font", "size", "sm")};
 		}
 	}
 }

@@ -1,16 +1,16 @@
 blockquote {
 
 	p {
-		font-size: var(--heading--font-size-4);
-		letter-spacing: var(--heading--letter-spacing-4);
-		line-height: var(--heading--line-height);
+		font-size: #{map-deep-get($config-heading, "font", "size", "h4")};
+		letter-spacing: #{map-deep-get($config-heading, "font", "letter-spacing", "h4")};
+		line-height: #{map-deep-get($config-heading, "font", "line-height", "h4")};
 	}
 
 	cite,
 	footer {
-		color: var(--global--color-foreground-light);
-		font-size: var(--global--font-size-sm);
-		letter-spacing: var(--global--letter-spacing-sm);
+		color: #{map-deep-get($config-global, "color", "forground-light")};
+		font-size: #{map-deep-get($config-global, "font", "size", "sm")};
+		letter-spacing: #{map-deep-get($config-global, "font", "letter-spacing", "sm")};
 	}
 
 	& > * {
@@ -30,15 +30,15 @@ blockquote {
 	&.alignright {
 
 		p {
-			font-size: var(--heading--font-size-5);
+			font-size: #{map-deep-get($config-heading, "font", "size", "h5")};
 			max-width: inherit;
 			width: inherit;
 		}
 
 		cite,
 		footer {
-			font-size: var(--global--font-size-xs);
-			letter-spacing: var(--global--letter-spacing-xs);
+			font-size: #{map-deep-get($config-global, "font", "size", "xs")};
+			letter-spacing: #{map-deep-get($config-global, "font", "letter-spacing", "xs")};
 		}
 	}
 }

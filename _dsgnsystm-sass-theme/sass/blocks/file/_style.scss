@@ -1,9 +1,9 @@
 .wp-block-file {
 
 	.wp-block-file__button {
-		background: var(--global--color-primary);
-		color: var(--global--color-background);
-		font-size: var(--global--font-size-sm);
+		background-color: #{map-deep-get($config-button, "color", "background")};
+		color: #{map-deep-get($config-button, "color", "text")};
+		font-size: #{map-deep-get($config-global, "font", "size", "sm")};
 		margin-left: #{map-deep-get($config-global, "spacing", "horizontal")};
 		margin-right: #{map-deep-get($config-global, "spacing", "horizontal")};
 	}
@@ -12,7 +12,7 @@
 	a.wp-block-file__button:focus,
 	a.wp-block-file__button:hover,
 	a.wp-block-file__button:visited {
-		color: var(--global--color-background);
+		color: #{map-deep-get($config-button, "color", "text-hover")};
 		opacity: .85;
 	}
 }
