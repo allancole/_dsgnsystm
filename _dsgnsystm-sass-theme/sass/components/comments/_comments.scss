@@ -108,7 +108,7 @@
 
 	.comment-metadata {
 
-		color: #{map-deep-get($config-global, "color", "foreground")};
+		color: #{map-deep-get($config-global, "color", "foreground", "default")};
 
 		a {
 			color: currentColor;

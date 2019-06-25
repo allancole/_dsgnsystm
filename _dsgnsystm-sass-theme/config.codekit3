@@ -778,6 +778,12 @@
 		"oAP": "/languages/zh-tw.po",
 		"oF": 0
 		},
+	"/node_modules": {
+		"ft": 65536,
+		"oA": 2,
+		"oAP": "/build/node_modules",
+		"oF": 0
+		},
 	"/package-lock.json": {
 		"ft": 524288,
 		"oA": 1,
@@ -2318,24 +2324,14 @@
 		"oS": 1,
 		"uL": 1
 		},
-	"/style-rtl-min.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/style-rtl-min-min.css",
-		"oF": 0,
-		"oS": 3
-		},
 	"/style-rtl.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/style-rtl-min.css",
-		"oF": 0,
+		"oF": 1,
 		"oS": 3
 		},
 	"/style.css": {
