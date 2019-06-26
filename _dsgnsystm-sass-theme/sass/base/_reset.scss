@@ -85,13 +85,19 @@ th {
 }
 
 html {
-  font-size: #{map-deep-get($config-global, "font", "size", "base")};
-  font-family: #{map-deep-get($config-global, "font", "family", "secondary")};
-  line-height: #{map-deep-get($config-global, "font", "line-height", "body")};
+	// Set mobile font-size to one step lower for mobile
+	font-size: #{map-deep-get($config-global, "font", "size", "root") / map-deep-get($config-global, "font", "size", "ratio")};
+	font-family: #{map-deep-get($config-global, "font", "family", "secondary")};
+	line-height: #{map-deep-get($config-global, "font", "line-height", "body")};
+
+	// Set mobile and ^ font-size to normal root
+	@include media(mobile) {
+		font-size: #{map-deep-get($config-global, "font", "size", "root")};
+	}
 }
 
 body {
-  font-size: #{map-deep-get($config-global, "font", "size", "md")};
+  font-size: #{map-deep-get($config-global, "font", "size", "base")};
   font-weight: normal;
   color: #{map-deep-get($config-global, "color", "foreground", "default")};
   text-align: left;

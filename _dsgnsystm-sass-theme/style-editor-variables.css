@@ -91,4 +91,4 @@ $grid-configuration: map-extend($grid-configuration-default, $grid-configuration
  * - Sets a fixed-width on content within alignwide and alignfull blocks
  */
 html {
-  font-size: 22px; }
+  font-size: 1em; }

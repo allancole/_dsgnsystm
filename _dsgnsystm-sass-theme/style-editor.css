@@ -119,7 +119,7 @@ body {
   color: #111111;
   background-color: white;
   font-family: serif;
-  font-size: 1rem;
+  font-size: 1.2em;
   font-weight: normal;
   line-height: 1.75em;
 }
@@ -150,24 +150,24 @@ a {
  * - Styles for basic HTML elemants
  */
 blockquote {
-  padding-left: 1rem;
+  padding-left: 1em;
 }
 
 blockquote p {
-  font-size: 1.25rem;
+  font-size: 1.728em;
   letter-spacing: 0;
   line-height: 1.125em;
 }
 
 blockquote cite,
 blockquote footer {
-  font-size: 0.875rem;
+  font-size: 0.8333333333em;
   letter-spacing: 0.025em;
 }
 
 blockquote > * {
-  margin-top: 18px;
-  margin-bottom: 18px;
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 blockquote > *:first-child {
@@ -183,7 +183,7 @@ blockquote.alignleft, blockquote.alignright {
 }
 
 blockquote.alignleft p, blockquote.alignright p {
-  font-size: 1rem;
+  font-size: 1.44em;
   max-width: inherit;
   width: inherit;
 }
@@ -191,16 +191,15 @@ blockquote.alignleft p, blockquote.alignright p {
 blockquote.alignleft cite,
 blockquote.alignleft footer, blockquote.alignright cite,
 blockquote.alignright footer {
-  font-size: 0.75rem;
+  font-size: 0.6944444444em;
   letter-spacing: 0.0125em;
 }
 
 figcaption {
   color: #767676;
-  font-size: 0.75rem;
-  line-height: 1.75em;
-  margin-top: calc(0.5 * 18px);
-  margin-bottom: 18px;
+  font-size: 0.6944444444em;
+  margin-top: calc(0.5 * 16px);
+  margin-bottom: 16px;
   text-align: center;
 }
 
@@ -256,11 +255,11 @@ object {
   color: white;
   font-weight: bold;
   font-family: sans-serif;
-  font-size: 1rem;
+  font-size: 1.2em;
   line-height: 1;
   background-color: blue;
   border-radius: calc(0.5 * 1rem);
-  padding: calc( 0.75 * 18px) 18px;
+  padding: calc( 0.75 * 16px) 16px;
 }
 
 .wp-block-button .wp-block-button__link:hover, .wp-block-button .wp-block-button__link:focus, .wp-block-button .wp-block-button__link.has-focus {
@@ -293,32 +292,32 @@ h6, .h6 {
 }
 
 h1, .h1 {
-  font-size: 2.75rem;
+  font-size: 2.48832em;
   letter-spacing: -0.025em;
 }
 
 h2, .h2 {
-  font-size: 2rem;
+  font-size: 2.0736em;
   letter-spacing: -0.0125em;
 }
 
 h3, .h3 {
-  font-size: 1.5rem;
+  font-size: 1.728em;
   letter-spacing: 0;
 }
 
 h4, .h4 {
-  font-size: 1.25rem;
+  font-size: 1.44em;
   letter-spacing: 0;
 }
 
 h5, .h5 {
-  font-size: 1rem;
+  font-size: 1.2em;
   letter-spacing: 0;
 }
 
 h6, .h6 {
-  font-size: 22px;
+  font-size: 1em;
   letter-spacing: 0;
 }
 
@@ -333,23 +332,22 @@ h6, .h6 {
 .wp-block-quote {
   border-left-color: blue;
   margin: 32px 0;
-  padding-left: 1rem;
+  padding-left: 1em;
 }
 
 .wp-block-quote p {
-  font-size: 1.25rem;
+  font-size: 1.44em;
   letter-spacing: 0;
 }
 
 .wp-block-quote.is-large, .wp-block-quote.is-style-large {
   border: none;
-  padding: 0 1rem;
+  padding: 0 1em;
 }
 
 .wp-block-quote.is-large p, .wp-block-quote.is-style-large p {
-  font-size: 1.5rem;
+  font-size: 1.728em;
   letter-spacing: 0;
-  line-height: 1.125em;
 }
 
 .wp-block-separator,
@@ -387,7 +385,7 @@ table td,
 table th,
 .wp-block-table td,
 .wp-block-table th {
-  padding: calc( 0.5 * 18px);
+  padding: calc( 0.5 * 16px);
 }
 
 /**
@@ -398,39 +396,36 @@ table th,
   color: #111111;
   font-family: sans-serif;
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 2.0736em;
   letter-spacing: -0.0125em;
-  line-height: 1.125em;
 }
 
 .is-small-text,
 .has-small-font-size {
-  font-size: 0.875rem;
+  font-size: 0.8333333333em;
 }
 
 .is-regular-text,
 .has-regular-font-size,
 .has-normal-font-size,
 .has-medium-font-size {
-  font-size: 1rem;
+  font-size: 1.2em;
 }
 
 .is-large-text,
 .has-large-font-size {
-  font-size: 1.5rem;
-  line-height: 1.125em;
+  font-size: 1.728em;
 }
 
 .is-larger-text,
 .has-larger-font-size,
 .has-huge-font-size {
-  font-size: 2.75rem;
-  line-height: 1.125em;
+  font-size: 2.48832em;
 }
 
 .has-drop-cap:not(:focus)::first-letter {
   font-family: sans-serif;
-  font-size: calc(2 * 2.75rem);
+  font-size: calc(2 * 2.48832em);
   font-weight: bold;
 }
 

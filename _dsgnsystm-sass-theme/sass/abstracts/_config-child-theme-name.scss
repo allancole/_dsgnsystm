@@ -1,130 +1,15 @@
-@import "functions";
-@import "config-global";
-@import "config-blocks";
-@import "config-components";
-@import "config-elements";
-@import "mixins";
+/**
+ * Filter Sass map values for child theme output.
+ * - See: style-child-theme-name.scss
+ */
 
-// Vertical Rhythm Multiplier
-$baseline-unit: 8px;
-
-$config-child-theme-name: (
-
-	/* Fonts */
-	"font": (
-		/* Font Family */
-		"family": (
-			"primary": Georgia,
-			"secondary": Helvetica,
-			"code": "monospace, monospace",
-			"ui": "-apple-system\, BlinkMacSystemFont\, \"Segoe UI\"\, \"Roboto\"\, \"Oxygen\"\, \"Ubuntu\"\, \"Cantarell\"\, \"Fira Sans\"\, \"Droid Sans\"\, \"Helvetica Neue\"\, sans-serif",
-		),
-		/* Font Size */
-		"size": (
-			"base": #{2.75 * $baseline-unit},
-			"xs": 0.75rem,
-			"sm": 0.875rem,
-			"md": 1rem,
-			"lg": 1.25rem,
-			"xl": 1.5rem,
-			"xxl": 2rem,
-			"xxxl": 2.75rem,
-			"xxxxl": 3.25rem,
-		),
-		/* Letter Spacing */
-		"letter-spacing": (
-			"base": 0,
-			"xs": 0.0125em,
-			"sm": 0.025em,
-			"md": 0,
-			"lg": 0,
-			"xl": 0,
-			"xxl": -0.0125em,
-			"xxxl": -0.025em,
-		),
-		/* Line Height */
-		"line-height": (
-			"base": 1rem,
-			"body": 1.75em,
-			"heading": 1.125em,
-			"xs": 1.75em,
-			"sm": 1.75em,
-			"md": 1.75em,
-			"lg": 1.125em,
-			"xl": 1.125em,
-			"xxl": 1.125em,
-			"xxxl": 1.125em,
-		),
-	),
-
-	/* Colors */
-	"color": (
-		"primary": (
-			"default": pink,
-			"hover": indigo,
-		),
-		"secondary": (
-			"default": red,
-			"hover": darkred,
-		),
-		"foreground": (
-			"default": #111111,
-			"light": #767676, // must be accesible!
-			"dark": #444444, // must be accesible!
-		),
-		"background": white,
-		"border": #DDDDDD,
-		"text-selection": lightblue,
-		"black": black,
-		"white": white,
-	),
-
-	/* Spacing */
-	"spacing": (
-		"unit": #{2.25 * $baseline-unit},
-		"horizontal": 1rem,
-		"vertical": #{4 * $baseline-unit}, /* 32px matches default spacing in the editor. */
-	),
-
-	/* Breakpoints */
-	"breakpoint": (
-		"sm": 600px,
-		"md": 782px,
-		"lg": 1024px,
-		"xl": 1280px,
-		"xxl": 1440px,
-	),
-
-	/* Elevation */
-	"elevation": (
-		"none": 0px 0px 0px 0px rgba( 0, 0, 0, 0 ),
-		"2dp": 0px 0px 4px 2px rgba( 0, 0, 0, 0.2 ),
-		"4dp": 0px 0px 8px 2px rgba( 0, 0, 0, 0.2 ),
-		"6dp": 2px 2px 4px 2px rgba( 0, 0, 0, 0.2 ),
-		"8dp": 2px 2px 8px 0px rgba( 0, 0, 0, 0.2 ),
-		"10dp": 4px 4px 8px 0px rgba( 0, 0, 0, 0.2 ),
-	),
-
-	/* Border radius */
-	"border-radius": (
-		"sm": calc(0.5 * 1rem),
-		"md": calc(0.75 * 1rem),
-		"lg": 1rem,
-		"pill": 200px,
-	),
-);
-
-// Not deep
-// $config-global: map-extend($config-global, $config-theme-name);
-// -> ("columns": 16, "layouts": (("large": 1300px, "huge": 1500px)), "direction": "ltr")
-
-// Deep
-// $config-global: map-deep-set($config-global, $config-child-theme-name);
-// -> ("columns": 16, "layouts": (("small": 800px, "medium": 1000px, "large": 1300px, "huge": 1500px)), "direction": "ltr")
-
-// @debug $grid-configuration;
-
-// $o-grid-default-config: map-deep-set($o-grid-default-config, "layouts" "M", 650px);
-
+$config-global: map-deep-set($config-global, "font" "size" "root", "22px");
 $config-global: map-deep-set($config-global, "font" "family" "primary", "Georgia");
-$config-global: map-deep-set($config-global, "font" "family" "secondary", "Courier");
+$config-global: map-deep-set($config-global, "font" "family" "secondary", "Arial");
+$config-global: map-deep-set($config-global, "color" "primary" "default", pink);
+
+// Button
+$config-button: map-deep-set($config-button, "color" "background", orange);
+
+// Header
+$config-header: map-deep-set($config-header, "branding" "title" "font" "family", "Verdana");
