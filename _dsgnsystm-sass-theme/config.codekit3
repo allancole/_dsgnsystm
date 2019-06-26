@@ -863,6 +863,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"/sass/abstracts/_config-child-theme-name.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/sass/abstracts/_config-child-theme-name.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"/sass/abstracts/_config-components.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -2254,6 +2267,29 @@
 		"oA": 0,
 		"oAP": "/single.php",
 		"oF": 0
+		},
+	"/style-child-theme-name.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/style-child-theme-name-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/style-child-theme-name.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/style-child-theme-name.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
 		},
 	"/style-editor-customizer.css": {
 		"aP": 1,

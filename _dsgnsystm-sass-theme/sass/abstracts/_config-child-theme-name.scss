@@ -1,18 +1,21 @@
-@mixin global-variables {
-	// empty for now
-}
+@import "functions";
+@import "config-global";
+@import "config-blocks";
+@import "config-components";
+@import "config-elements";
+@import "mixins";
 
 // Vertical Rhythm Multiplier
 $baseline-unit: 8px;
 
-$config-global: (
+$config-child-theme-name: (
 
 	/* Fonts */
 	"font": (
 		/* Font Family */
 		"family": (
-			"primary": "sans-serif",
-			"secondary": "serif",
+			"primary": Georgia,
+			"secondary": Helvetica,
 			"code": "monospace, monospace",
 			"ui": "-apple-system\, BlinkMacSystemFont\, \"Segoe UI\"\, \"Roboto\"\, \"Oxygen\"\, \"Ubuntu\"\, \"Cantarell\"\, \"Fira Sans\"\, \"Droid Sans\"\, \"Helvetica Neue\"\, sans-serif",
 		),
@@ -57,7 +60,7 @@ $config-global: (
 	/* Colors */
 	"color": (
 		"primary": (
-			"default": blue,
+			"default": pink,
 			"hover": indigo,
 		),
 		"secondary": (
@@ -110,3 +113,18 @@ $config-global: (
 		"pill": 200px,
 	),
 );
+
+// Not deep
+// $config-global: map-extend($config-global, $config-theme-name);
+// -> ("columns": 16, "layouts": (("large": 1300px, "huge": 1500px)), "direction": "ltr")
+
+// Deep
+// $config-global: map-deep-set($config-global, $config-child-theme-name);
+// -> ("columns": 16, "layouts": (("small": 800px, "medium": 1000px, "large": 1300px, "huge": 1500px)), "direction": "ltr")
+
+// @debug $grid-configuration;
+
+// $o-grid-default-config: map-deep-set($o-grid-default-config, "layouts" "M", 650px);
+
+$config-global: map-deep-set($config-global, "font" "family" "primary", "Georgia");
+$config-global: map-deep-set($config-global, "font" "family" "secondary", "Courier");
